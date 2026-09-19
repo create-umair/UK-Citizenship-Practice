@@ -3,776 +3,129 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UK Citizenship Prep — Life in the UK Test Practice</title>
+<title>UK Citizenship Prep — Life in the UK & English (B1) Test Practice</title>
+<meta name="description" content="Independent study aid for the Life in the UK test and the English (B1) language requirement — mock exams, study guides, and flashcards.">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --navy:#122447;
-    --navy-deep:#0b1730;
-    --paper:#EEF0EC;
-    --paper-card:#FFFFFF;
-    --ink:#171A21;
-    --ink-soft:#4B5163;
-    --red:#A31E2E;
-    --gold:#9C7A2E;
-    --gold-light:#C9A85C;
-    --line:#D8DBD3;
-    --good:#1F7A4D;
-    --bad:#A31E2E;
-    --radius:2px;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Inter',sans-serif;
-    line-height:1.55;
-  }
-  h1,h2,h3,.serif{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    letter-spacing:-0.01em;
-    color:var(--navy);
-    margin:0;
-  }
-  a{color:inherit;}
-  .container{max-width:920px;margin:0 auto;padding:0 24px;}
-  .hidden{display:none !important;}
-
-  /* ---------- Top bar ---------- */
-  .topbar{
-    background:var(--navy-deep);
-    color:#fff;
-    border-bottom:3px solid var(--gold);
-  }
-  .topbar-inner{
-    max-width:920px;margin:0 auto;padding:16px 24px;
-    display:flex;align-items:center;justify-content:space-between;
-  }
-  .brand{display:flex;align-items:center;gap:10px;font-family:'Fraunces',serif;font-size:19px;font-weight:600;color:#fff;}
-  .brand .mark{
-    width:26px;height:26px;border:1.5px solid var(--gold-light);
-    display:flex;align-items:center;justify-content:center;
-    font-size:12px;color:var(--gold-light);font-family:'Inter',sans-serif;font-weight:700;
-  }
-  .nav{display:flex;gap:22px;font-size:14px;}
-  .nav button{
-    background:none;border:none;color:#D9DCE6;font-family:'Inter',sans-serif;
-    font-size:14px;cursor:pointer;padding:4px 0;border-bottom:2px solid transparent;
-  }
-  .nav button:hover, .nav button.active{color:#fff;border-bottom-color:var(--gold-light);}
-  .nav-mobile-toggle{display:none;background:none;border:1px solid #3a4666;color:#fff;padding:6px 10px;font-size:13px;cursor:pointer;}
-
-  /* ---------- Hero ---------- */
-  .hero{background:var(--navy);color:#fff;padding:64px 0 56px;}
-  .hero-inner{max-width:920px;margin:0 auto;padding:0 24px;}
-  .kicker{font-size:13px;color:var(--gold-light);text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px;font-family:'Inter',sans-serif;}
-  .hero h1{font-size:40px;line-height:1.12;color:#fff;max-width:640px;}
-  .hero p.lead{font-size:17px;color:#C9CEDC;max-width:560px;margin:18px 0 28px;}
-  .cta-row{display:flex;gap:12px;flex-wrap:wrap;}
-  .btn{
-    font-family:'Inter',sans-serif;font-size:14.5px;font-weight:600;
-    padding:12px 22px;border-radius:var(--radius);cursor:pointer;border:1.5px solid transparent;
-    display:inline-flex;align-items:center;gap:8px;
-  }
-  .btn-gold{background:var(--gold-light);color:var(--navy-deep);}
-  .btn-gold:hover{background:#dabb74;}
-  .btn-outline{background:transparent;border-color:#4a5578;color:#fff;}
-  .btn-outline:hover{border-color:var(--gold-light);}
-  .btn-navy{background:var(--navy);color:#fff;}
-  .btn-navy:hover{background:var(--navy-deep);}
-  .btn-red{background:var(--red);color:#fff;}
-  .btn-red:hover{background:#8a1926;}
-  .btn:disabled{opacity:.5;cursor:not-allowed;}
-
-  .disclaimer{
-    margin-top:32px;background:rgba(255,255,255,.06);border:1px solid #33406a;
-    padding:14px 18px;font-size:13.5px;color:#C9CEDC;max-width:640px;
-  }
-  .disclaimer strong{color:#fff;}
-
-  /* info panel like a bio-data strip */
-  .infostrip{background:var(--navy-deep);border-top:1px solid #22304f;}
-  .infostrip-inner{
-    max-width:920px;margin:0 auto;padding:20px 24px;
-    display:grid;grid-template-columns:repeat(4,1fr);gap:0;
-  }
-  .infostrip-item{padding:0 20px;border-left:1px solid #2b3a5e;}
-  .infostrip-item:first-child{border-left:none;padding-left:0;}
-  .infostrip-num{font-family:'Fraunces',serif;font-size:26px;color:var(--gold-light);}
-  .infostrip-label{font-size:12.5px;color:#9BA3BC;margin-top:2px;}
-
-  /* ---------- Sections ---------- */
-  section.panel{padding:56px 0;border-bottom:1px solid var(--line);}
-  .section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:10px;}
-  .section-head h2{font-size:26px;}
-  .section-head .sub{color:var(--ink-soft);font-size:14.5px;}
-
-  /* ---------- Study: chapter list ---------- */
-  .chapter{
-    background:var(--paper-card);border:1px solid var(--line);margin-bottom:14px;
-  }
-  .chapter-head{
-    display:flex;align-items:center;gap:16px;padding:18px 20px;cursor:pointer;
-  }
-  .chapter-roman{
-    font-family:'Fraunces',serif;color:var(--gold);font-size:20px;min-width:34px;
-  }
-  .chapter-head h3{font-size:17px;color:var(--navy);}
-  .chapter-head .meta{margin-left:auto;font-size:13px;color:var(--ink-soft);}
-  .chapter-body{padding:0 20px 20px 70px;display:none;}
-  .chapter.open .chapter-body{display:block;}
-  .chapter.open .chapter-head{border-bottom:1px solid var(--line);}
-  .study-q{padding:14px 0;border-top:1px solid #ECEEE6;}
-  .study-q:first-child{border-top:none;}
-  .study-q .q{font-weight:600;font-size:14.5px;margin-bottom:6px;}
-  .study-q .a{font-size:13.5px;color:var(--ink-soft);}
-  .study-q .a b{color:var(--good);}
-
-  /* ---------- Practice test ---------- */
-  .test-setup{background:var(--paper-card);border:1px solid var(--line);padding:32px;text-align:left;}
-  .test-setup h3{font-size:20px;margin-bottom:10px;}
-  .test-setup ul{margin:16px 0;padding-left:0;list-style:none;font-size:14.5px;color:var(--ink-soft);}
-  .test-setup li{padding:6px 0 6px 22px;position:relative;}
-  .test-setup li:before{content:"—";position:absolute;left:0;color:var(--gold);}
-
-  .quiz-shell{background:var(--paper-card);border:1px solid var(--line);}
-  .quiz-top{
-    display:flex;align-items:center;justify-content:space-between;
-    padding:14px 22px;border-bottom:1px solid var(--line);background:#FAFAF7;
-    font-size:13.5px;color:var(--ink-soft);
-  }
-  .timer{font-family:'Fraunces',serif;font-size:17px;color:var(--navy);font-variant-numeric:tabular-nums;}
-  .timer.warn{color:var(--red);}
-  .progressbar{height:4px;background:var(--line);}
-  .progressbar-fill{height:100%;background:var(--gold);width:0%;transition:width .2s;}
-  .quiz-body{padding:32px 30px;}
-  .quiz-chapter-tag{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--gold);margin-bottom:10px;}
-  .quiz-q{font-size:19px;color:var(--navy);font-family:'Fraunces',serif;margin-bottom:22px;line-height:1.35;}
-  .options{display:flex;flex-direction:column;gap:10px;}
-  .option{
-    text-align:left;border:1px solid var(--line);background:#fff;padding:14px 16px;
-    font-family:'Inter',sans-serif;font-size:14.5px;cursor:pointer;display:flex;gap:12px;align-items:flex-start;
-  }
-  .option:hover{border-color:var(--navy);}
-  .option .letter{
-    width:22px;height:22px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;
-    font-size:12px;flex:none;color:var(--ink-soft);
-  }
-  .option.selected{border-color:var(--navy);background:#F2F4FB;}
-  .option.selected .letter{background:var(--navy);color:#fff;border-color:var(--navy);}
-  .option.correct{border-color:var(--good);background:#EFF8F2;}
-  .option.correct .letter{background:var(--good);color:#fff;border-color:var(--good);}
-  .option.incorrect{border-color:var(--bad);background:#FBEEEF;}
-  .option.incorrect .letter{background:var(--bad);color:#fff;border-color:var(--bad);}
-  .explain{margin-top:16px;padding:14px 16px;background:#F5F6F1;border-left:3px solid var(--gold);font-size:13.5px;color:var(--ink-soft);display:none;}
-  .explain.show{display:block;}
-  .quiz-nav{display:flex;justify-content:space-between;padding:18px 30px;border-top:1px solid var(--line);}
-
-  .results{padding:36px;text-align:center;}
-  .results .score{font-family:'Fraunces',serif;font-size:56px;color:var(--navy);}
-  .results .verdict{font-size:16px;margin:6px 0 26px;font-weight:600;}
-  .verdict.pass{color:var(--good);}
-  .verdict.fail{color:var(--bad);}
-  .breakdown{text-align:left;max-width:420px;margin:0 auto 26px;}
-  .breakdown-row{display:flex;justify-content:space-between;font-size:13.5px;padding:8px 0;border-bottom:1px solid var(--line);}
-  .breakdown-bar{background:var(--line);height:6px;width:120px;position:relative;}
-  .breakdown-bar span{position:absolute;left:0;top:0;height:100%;background:var(--gold);}
-
-  /* ---------- Flashcards ---------- */
-  .flash-wrap{display:flex;flex-direction:column;align-items:center;gap:18px;}
-  .flashcard{
-    width:100%;max-width:520px;height:260px;perspective:1200px;cursor:pointer;
-  }
-  .flashcard-inner{
-    position:relative;width:100%;height:100%;transition:transform .5s;transform-style:preserve-3d;
-  }
-  .flashcard.flipped .flashcard-inner{transform:rotateY(180deg);}
-  .flashcard-face{
-    position:absolute;inset:0;backface-visibility:hidden;
-    background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;
-    padding:30px;text-align:center;font-family:'Fraunces',serif;font-size:21px;border:1px solid var(--navy);
-  }
-  .flashcard-face.back{
-    transform:rotateY(180deg);background:#fff;color:var(--ink);border:1px solid var(--line);font-family:'Inter',sans-serif;font-size:15.5px;font-weight:500;
-  }
-  .flashcard-face .tag{position:absolute;top:14px;left:16px;font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--gold-light);font-family:'Inter',sans-serif;}
-  .flashcard-face.back .tag{color:var(--gold);}
-  .flash-controls{display:flex;gap:14px;align-items:center;}
-  .flash-count{font-size:13.5px;color:var(--ink-soft);}
-
-  /* ---------- Premium ---------- */
-  .premium-band{background:var(--navy-deep);color:#fff;}
-  .compare{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px;}
-  .plan{background:#16203D;border:1px solid #2b3a5e;padding:26px;}
-  .plan.gold{border-color:var(--gold-light);background:#1A2646;}
-  .plan h3{color:#fff;font-size:19px;}
-  .plan .price{font-family:'Fraunces',serif;font-size:32px;color:var(--gold-light);margin:8px 0 18px;}
-  .plan ul{list-style:none;padding:0;margin:0 0 22px;font-size:14px;color:#C9CEDC;}
-  .plan li{padding:7px 0 7px 22px;position:relative;}
-  .plan li:before{content:"✓";position:absolute;left:0;color:var(--gold-light);}
-  .plan li.no:before{content:"–";color:#5b6789;}
-  .plan li.no{color:#7a83a0;}
-
-  /* lock badge */
-  .lock-badge{
-    display:inline-flex;align-items:center;gap:6px;background:#FBF3E2;border:1px solid var(--gold);
-    color:#7a5f22;font-size:12.5px;padding:4px 10px;border-radius:2px;
-  }
-
-  /* modal */
-  .modal-backdrop{
-    position:fixed;inset:0;background:rgba(11,23,48,.6);display:flex;align-items:center;justify-content:center;
-    padding:20px;z-index:50;
-  }
-  .modal{background:#fff;max-width:440px;width:100%;padding:30px;border-top:4px solid var(--gold);}
-  .modal h3{font-size:20px;margin-bottom:12px;}
-  .modal p{font-size:14.5px;color:var(--ink-soft);margin-bottom:18px;}
-  .modal .actions{display:flex;justify-content:flex-end;gap:10px;}
-
-  footer{padding:34px 0;text-align:center;font-size:13px;color:var(--ink-soft);}
-
-  @media(max-width:720px){
-    .nav{display:none;}
-    .nav-mobile-toggle{display:inline-block;}
-    .nav.open{
-      display:flex;flex-direction:column;position:absolute;top:64px;left:0;right:0;
-      background:var(--navy-deep);padding:14px 24px;gap:14px;border-bottom:2px solid var(--gold);
-    }
-    .hero h1{font-size:30px;}
-    .infostrip-inner{grid-template-columns:1fr 1fr;gap:16px;}
-    .infostrip-item{border-left:none;padding-left:0;padding-bottom:10px;}
-    .compare{grid-template-columns:1fr;}
-    .chapter-body{padding-left:20px;}
-    .quiz-body{padding:24px 18px;}
-  }
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body data-page="home">
 
-<div class="topbar">
-  <div class="topbar-inner">
-    <div class="brand"><span class="mark">UK</span> Citizenship Prep</div>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html"><img src="assets/logo-mark.svg" alt="UK Citizenship Prep logo"> UK Citizenship Prep</a>
     <nav class="nav" id="mainNav">
-      <button data-target="study">Study</button>
-      <button data-target="practice">Practice Test</button>
-      <button data-target="flashcards">Flashcards</button>
-      <button data-target="premium">Premium</button>
+      <a href="index.html" data-page="home">Home</a>
+      <a href="study.html" data-page="study">Study</a>
+      <a href="practice.html" data-page="practice">Practice Test</a>
+      <a href="flashcards.html" data-page="flashcards">Flashcards</a>
+      <a href="english.html" data-page="english">English (B1)</a>
+      <a href="premium.html" data-page="premium">Premium</a>
     </nav>
     <button class="nav-mobile-toggle" id="navToggle">Menu</button>
   </div>
-</div>
+</header>
 
 <section class="hero">
   <div class="hero-inner">
-    <div class="kicker">Life in the UK Test — Independent Study Aid</div>
-    <h1>Prepare with confidence for your citizenship test.</h1>
-    <p class="lead">Timed mock exams, topic-by-topic study, and flashcards covering the five chapters of the official test handbook — built to mirror the real exam format.</p>
-    <div class="cta-row">
-      <button class="btn btn-gold" data-target="practice">Start a practice test</button>
-      <button class="btn btn-outline" data-target="study">Browse study topics</button>
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">Independent Study Aid</div>
+        <h1>Prepare with confidence for your citizenship journey.</h1>
+        <p class="lead">Everything you need to get ready for the Life in the UK test — plus practice for the English (B1) language requirement — in one place. Timed mock exams, full study guides, and flashcards.</p>
+        <div class="cta-row">
+          <a class="btn btn-gold" href="practice.html">Start a practice test</a>
+          <a class="btn btn-outline" href="study.html">Browse study topics</a>
+        </div>
+      </div>
+      <img class="hero-art" src="assets/illus-parliament.svg" alt="Illustration of the Westminster skyline">
     </div>
     <div class="disclaimer">
-      <strong>For preparation purposes only.</strong> This is an independent study aid and is not affiliated with, endorsed by, or produced by the Home Office, UK Visas and Immigration, or gov.uk. It does not replace the official "Life in the United Kingdom" handbook. Always confirm current test requirements at the official source, gov.uk.
+      <strong>For preparation purposes only.</strong> This is an independent study aid and is not affiliated with, endorsed by, or produced by the Home Office, UK Visas and Immigration, or gov.uk. It does not replace the official "Life in the United Kingdom" handbook or any approved Secure English Language Test (SELT). Always confirm current requirements at the official source, gov.uk.
     </div>
   </div>
 </section>
 
 <div class="infostrip">
   <div class="infostrip-inner">
-    <div class="infostrip-item"><div class="infostrip-num">5</div><div class="infostrip-label">Handbook chapters covered</div></div>
-    <div class="infostrip-item"><div class="infostrip-num" id="statQCount">—</div><div class="infostrip-label">Practice questions</div></div>
-    <div class="infostrip-item"><div class="infostrip-num">45</div><div class="infostrip-label">Minute mock exam</div></div>
+    <div class="infostrip-item"><div class="infostrip-num">120+</div><div class="infostrip-label">Life in the UK questions</div></div>
+    <div class="infostrip-item"><div class="infostrip-num">50+</div><div class="infostrip-label">English (B1) practice questions</div></div>
+    <div class="infostrip-item"><div class="infostrip-num">45</div><div class="infostrip-label">Minute timed mock exam</div></div>
     <div class="infostrip-item"><div class="infostrip-num">75%</div><div class="infostrip-label">Official pass mark</div></div>
   </div>
 </div>
 
-<!-- STUDY -->
-<section class="panel" id="study">
+<section class="panel">
   <div class="container">
     <div class="section-head">
-      <h2>Study by chapter</h2>
-      <div class="sub">Work through each chapter at your own pace, with explanations.</div>
+      <h2>Two modules, one place</h2>
+      <div class="sub">Study for the civic knowledge test and the English requirement side by side.</div>
     </div>
-    <div id="chapterList"></div>
-  </div>
-</section>
-
-<!-- PRACTICE TEST -->
-<section class="panel" id="practice">
-  <div class="container">
-    <div class="section-head">
-      <h2>Practice test</h2>
-      <div class="sub">24 questions · 45 minutes · pass mark 75%</div>
-    </div>
-
-    <div id="testSetup" class="test-setup">
-      <h3>Mock exam</h3>
-      <p style="color:var(--ink-soft);font-size:14.5px;">This mirrors the real test format: 24 questions drawn at random from across all five chapters, with a 45-minute timer. You need 18 correct (75%) to pass.</p>
-      <ul>
-        <li>Questions are shuffled every time you start a new test</li>
-        <li>You can move between questions before submitting</li>
-        <li>Full explanations are shown once you finish</li>
-      </ul>
-      <div id="dailyLimitNote" style="font-size:13.5px;color:var(--red);margin-bottom:16px;display:none;">
-        You've used your 3 free mock exams for this session. <a href="#premium" data-target="premium" style="color:var(--red);text-decoration:underline;cursor:pointer;">Upgrade to Premium</a> for unlimited tests.
+    <div class="card-grid">
+      <div class="feature-card">
+        <img class="icon" src="assets/illus-book.svg" alt="" style="width:40px;height:40px;border-radius:4px;">
+        <h3>Life in the UK test</h3>
+        <p>All five official handbook chapters, a full 24-question timed mock exam, per-chapter scoring, and flashcards for key dates and facts.</p>
+        <a class="btn btn-outline-navy btn-sm" href="study.html">Start studying →</a>
       </div>
-      <button class="btn btn-navy" id="startTestBtn">Begin mock exam</button>
-    </div>
-
-    <div id="quizArea" class="hidden"></div>
-    <div id="resultsArea" class="hidden"></div>
-  </div>
-</section>
-
-<!-- FLASHCARDS -->
-<section class="panel" id="flashcards">
-  <div class="container">
-    <div class="section-head">
-      <h2>Flashcards</h2>
-      <div class="sub">Quick recall for key facts and dates. Tap a card to flip it.</div>
-    </div>
-    <div class="flash-wrap">
-      <div class="flashcard" id="flashcard">
-        <div class="flashcard-inner">
-          <div class="flashcard-face front"><span class="tag" id="flashTagFront">Chapter</span><span id="flashFront"></span></div>
-          <div class="flashcard-face back"><span class="tag" id="flashTagBack">Answer</span><span id="flashBack"></span></div>
-        </div>
+      <div class="feature-card">
+        <img class="icon" src="assets/illus-speech.svg" alt="" style="width:40px;height:40px;border-radius:4px;">
+        <h3>English (B1) practice</h3>
+        <p>Grammar, vocabulary, and reading comprehension practice at B1 level — the standard generally required to demonstrate English proficiency.</p>
+        <a class="btn btn-outline-navy btn-sm" href="english.html">Practise English →</a>
       </div>
-      <div class="flash-count" id="flashCount"></div>
-      <div class="flash-controls">
-        <button class="btn btn-outline" style="border-color:var(--line);color:var(--navy);" id="flashPrev">← Previous</button>
-        <button class="btn btn-navy" id="flashNext">Next →</button>
+      <div class="feature-card">
+        <img class="icon" src="assets/logo-mark.svg" alt="" style="width:40px;height:40px;">
+        <h3>Track your readiness</h3>
+        <p>Every mock exam gives you an instant pass/fail result and a breakdown by topic, so you know exactly where to focus before the real thing.</p>
+        <a class="btn btn-outline-navy btn-sm" href="premium.html">See Premium →</a>
       </div>
+    </div>
+    <div class="trust-row">
+      <div class="trust-item"><span class="dot"></span>No account required to start practising</div>
+      <div class="trust-item"><span class="dot"></span>Works on mobile and desktop</div>
+      <div class="trust-item"><span class="dot"></span>Explanations included with every answer</div>
     </div>
   </div>
 </section>
 
-<!-- PREMIUM -->
-<section class="panel premium-band" id="premium">
-  <div class="container">
-    <div class="section-head">
-      <h2 style="color:#fff;">Free vs Premium</h2>
-      <div class="sub" style="color:#9BA3BC;">Everything you need to get started is free. Premium removes limits ahead of exam day.</div>
-    </div>
-    <div class="compare">
-      <div class="plan">
-        <h3>Free</h3>
-        <div class="price">£0</div>
-        <ul>
-          <li>Full study mode, all 5 chapters</li>
-          <li>Flashcards</li>
-          <li>3 mock exams per session</li>
-          <li class="no">Full 500+ question bank</li>
-          <li class="no">Downloadable revision notes</li>
-          <li class="no">Topic-mastery analytics</li>
-        </ul>
-        <button class="btn btn-outline" data-target="practice">Get started</button>
-      </div>
-      <div class="plan gold">
-        <h3>Premium</h3>
-        <div class="price">£4.99 <span style="font-size:14px;color:#9BA3BC;">one-off</span></div>
-        <ul>
-          <li>Unlimited mock exams</li>
-          <li>Full question bank</li>
-          <li>Downloadable PDF revision notes</li>
-          <li>Topic-by-topic mastery analytics</li>
-          <li>Personalised exam-day countdown plan</li>
-          <li>Ad-free</li>
-        </ul>
-        <button class="btn btn-gold" id="upgradeBtn">Upgrade to Premium</button>
-      </div>
-    </div>
+<section class="panel premium-band" style="border-bottom:none;">
+  <div class="container" style="text-align:center;">
+    <h2 style="color:#fff;">Free to start. Premium when you're ready.</h2>
+    <p style="color:#9BA3BC;max-width:520px;margin:12px auto 24px;font-size:15px;">Study mode, flashcards, and a limited number of daily mock exams are free. Premium unlocks unlimited exams, the full question bank, and downloadable revision notes.</p>
+    <a class="btn btn-gold" href="premium.html">Compare Free vs Premium</a>
   </div>
 </section>
 
-<footer>
+<footer class="site-footer">
   <div class="container">
-    Independent study aid · Not affiliated with the Home Office or gov.uk · Built for preparation purposes only
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand"><img src="assets/logo-mark.svg" alt=""> UK Citizenship Prep</div>
+        <p style="font-size:13.5px;max-width:280px;">An independent study aid to help people prepare for the Life in the UK test and the English (B1) language requirement.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Study</h4>
+        <a href="study.html">Chapters</a>
+        <a href="practice.html">Mock exam</a>
+        <a href="flashcards.html">Flashcards</a>
+        <a href="english.html">English (B1)</a>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <a href="premium.html">Premium</a>
+        <a href="https://www.gov.uk/life-in-the-uk-test" target="_blank" rel="noopener">Official gov.uk test info</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © <span id="footerYear"></span> UK Citizenship Prep · Independent study aid · Not affiliated with the Home Office or gov.uk
+    </div>
   </div>
 </footer>
 
 <div id="modalRoot"></div>
-
-<script>
-/* =========================================================
-   QUESTION BANK — original practice questions, organised by
-   the five handbook chapters. Written to test the same public
-   civic knowledge as the official test, not copied from it.
-========================================================= */
-const CHAPTERS = [
-  { id: 1, roman: "I", title: "The values and principles of the UK" },
-  { id: 2, roman: "II", title: "What is the UK?" },
-  { id: 3, roman: "III", title: "A long and illustrious history" },
-  { id: 4, roman: "IV", title: "A modern, thriving society" },
-  { id: 5, roman: "V", title: "The UK government, the law, and your role" }
-];
-
-const QUESTIONS = [
-  // Chapter 1 — Values and principles
-  {ch:1, q:"Which of these is one of the fundamental principles new residents are expected to uphold?", opts:["Respect for the law","Membership of a political party","Fluency in Latin","Ownership of property"], correct:0, ex:"Respect for the law and the rights of others is one of the core principles set out for anyone settling in the UK."},
-  {ch:1, q:"Freedom of speech in the UK is best described as a right that:", opts:["Is unlimited in all circumstances","Comes with legal responsibilities, such as not inciting violence","Only applies to journalists","Was introduced in the 21st century"], correct:1, ex:"Free speech is protected but not absolute — it carries responsibilities, including not inciting hatred or violence."},
-  {ch:1, q:"Equal treatment regardless of gender, race, or religion is protected mainly through which type of law?", opts:["Tax law","Equality and human rights law","Planning law","Maritime law"], correct:1, ex:"The Equality Act and related human rights legislation protect people from discrimination on these grounds."},
-  {ch:1, q:"Tolerance of others, as expected in UK society, means:", opts:["Agreeing with everyone's beliefs","Accepting people's right to hold different beliefs and lifestyles peacefully","Avoiding contact with people of different faiths","Only tolerating views shared by the majority"], correct:1, ex:"Tolerance means accepting the right of others to live according to their own beliefs, even where you disagree."},
-  {ch:1, q:"Participation in community life is encouraged through activities such as:", opts:["Voting only","Volunteering, joining local groups, and voting","Paying taxes only","Attending university"], correct:1, ex:"Volunteering, joining local and community groups, and voting are all ways residents are encouraged to participate."},
-  {ch:1, q:"The rule of law means that:", opts:["The Prime Minister can overrule any court","Everyone, including the government, is subject to the law","Only citizens have to obey the law","Laws only apply in England"], correct:1, ex:"The rule of law is the principle that everyone — including those in government — is equally subject to the law."},
-  {ch:1, q:"Which of these best reflects the expected attitude toward democracy in the UK?", opts:["Voting is compulsory for all adults","Participation in the democratic process is encouraged but voting is voluntary","Only property owners may vote","Elections are held only once a decade"], correct:1, ex:"Voting is voluntary in UK elections, though participation in democratic life is strongly encouraged."},
-  {ch:1, q:"A key part of British values relating to individual liberty is:", opts:["The right to make your own lifestyle choices within the law","The right to ignore court rulings","The right to avoid paying tax","The right to bear arms"], correct:0, ex:"Individual liberty — the freedom to make lawful choices about how you live — is one of the values new residents are expected to understand and respect."},
-  {ch:1, q:"Mutual respect in a diverse society mainly involves:", opts:["Everyone adopting the same customs","Treating people with courtesy regardless of background","Living separately from other communities","Speaking only English in public"], correct:1, ex:"Mutual respect means treating people of different backgrounds and beliefs with courtesy and fairness."},
-  {ch:1, q:"Which of the following is NOT one of the core values new residents are expected to uphold?", opts:["Respect for the law","Tolerance of different beliefs","Support for one specific political party","Participation in community life"], correct:2, ex:"Residents are not expected to support any particular political party — political neutrality of the state is a core principle."},
-
-  // Chapter 2 — What is the UK?
-  {ch:2, q:"Which four nations make up the United Kingdom?", opts:["England, Scotland, Wales, Northern Ireland","England, Ireland, Scotland, Cornwall","England, Wales, Ireland, Isle of Man","Scotland, Wales, England, Jersey"], correct:0, ex:"The UK is made up of England, Scotland, Wales, and Northern Ireland."},
-  {ch:2, q:"What is the capital city of Scotland?", opts:["Glasgow","Edinburgh","Aberdeen","Inverness"], correct:1, ex:"Edinburgh is the capital of Scotland; Glasgow is Scotland's largest city."},
-  {ch:2, q:"What is the capital city of Wales?", opts:["Swansea","Newport","Cardiff","Bangor"], correct:2, ex:"Cardiff is the capital city of Wales."},
-  {ch:2, q:"Which sea separates Great Britain from Ireland?", opts:["The North Sea","The Irish Sea","The Celtic Ocean","The English Channel"], correct:1, ex:"The Irish Sea separates the island of Great Britain from the island of Ireland."},
-  {ch:2, q:"The Channel Islands and the Isle of Man are:", opts:["Part of the United Kingdom","Crown Dependencies, not part of the UK","Overseas territories in the Caribbean","Regions of Wales"], correct:1, ex:"The Channel Islands and the Isle of Man are Crown Dependencies with their own governments — they are not part of the UK."},
-  {ch:2, q:"Which of these is the longest river in the UK?", opts:["The Thames","The Severn","The Mersey","The Clyde"], correct:1, ex:"The River Severn, flowing through Wales and England, is the longest river in the UK."},
-  {ch:2, q:"What is the highest mountain in the British Isles?", opts:["Snowdon","Scafell Pike","Ben Nevis","Cairn Gorm"], correct:2, ex:"Ben Nevis in Scotland is the highest mountain in the British Isles."},
-  {ch:2, q:"Which city is the capital of Northern Ireland?", opts:["Derry","Belfast","Armagh","Lisburn"], correct:1, ex:"Belfast is the capital of Northern Ireland."},
-  {ch:2, q:"Approximately how is the population of the UK distributed across its four nations?", opts:["Roughly equal across all four","England has by far the largest population","Scotland has the largest population","Wales and Northern Ireland together outnumber England"], correct:1, ex:"England has significantly more people than Scotland, Wales, and Northern Ireland combined."},
-  {ch:2, q:"The official currency of the United Kingdom is the:", opts:["Euro","Pound sterling","UK dollar","Crown"], correct:1, ex:"The pound sterling (£) is the official currency used throughout the UK."},
-
-  // Chapter 3 — History
-  {ch:3, q:"Who is generally credited with a failed invasion of Britain in 55 BC, followed by a successful Roman conquest almost a century later?", opts:["Julius Caesar","Emperor Claudius","William the Conqueror","King Alfred"], correct:0, ex:"Julius Caesar led expeditions to Britain in 55 and 54 BC; the full Roman conquest came later, under Emperor Claudius in AD 43."},
-  {ch:3, q:"The Battle of Hastings in 1066 resulted in the crowning of which king?", opts:["Harold Godwinson","William the Conqueror","Edward the Confessor","Richard the Lionheart"], correct:1, ex:"William, Duke of Normandy, defeated King Harold at Hastings in 1066 and became William I, 'the Conqueror'."},
-  {ch:3, q:"Magna Carta, signed in 1215, is significant because it:", opts:["Abolished the monarchy","Limited the power of the king and established that everyone is subject to the law","Created the Church of England","Ended the Hundred Years' War"], correct:1, ex:"Magna Carta established the principle that the monarch, too, was subject to the law — an early foundation of constitutional government."},
-  {ch:3, q:"The Church of England was established after Henry VIII broke away from the authority of:", opts:["The King of France","The Pope in Rome","The Holy Roman Emperor","The Scottish Church"], correct:1, ex:"Henry VIII broke from the authority of the Pope in the 1530s, establishing the Church of England with the monarch as its head."},
-  {ch:3, q:"The 'Glorious Revolution' of 1688 led to:", opts:["The execution of Charles I","William and Mary jointly taking the throne under agreed constitutional limits","The union of England and Scotland","The loss of the American colonies"], correct:1, ex:"In 1688, James II was replaced by William III and Mary II, who accepted new constitutional limits on royal power."},
-  {ch:3, q:"The Act of Union 1707 joined which two kingdoms to form Great Britain?", opts:["England and Ireland","England and Wales","England and Scotland","Scotland and Ireland"], correct:2, ex:"The Act of Union 1707 united the Kingdom of England (which included Wales) and the Kingdom of Scotland into the Kingdom of Great Britain."},
-  {ch:3, q:"The Industrial Revolution, which began in Britain in the 18th century, was driven in large part by innovations in which industries?", opts:["Textiles and steam power","Aviation and telecommunications","Nuclear energy and computing","Shipping insurance"], correct:0, ex:"New machinery in textile manufacturing and the development of steam power drove Britain's early industrialisation."},
-  {ch:3, q:"Which British queen's reign (1837–1901) is associated with major industrial and imperial expansion?", opts:["Queen Anne","Queen Victoria","Queen Elizabeth I","Queen Mary I"], correct:1, ex:"Queen Victoria's long reign saw major industrial growth and the expansion of the British Empire."},
-  {ch:3, q:"The Representation of the People Act 1918 was significant because it:", opts:["Gave some women the right to vote for the first time","Abolished the House of Lords","Introduced the NHS","Ended child labour"], correct:0, ex:"The 1918 Act gave the vote to women over 30 who met property qualifications — a major step toward equal suffrage, achieved fully in 1928."},
-  {ch:3, q:"The National Health Service (NHS), providing free healthcare at the point of use, was founded in which year?", opts:["1928","1945","1948","1965"], correct:2, ex:"The NHS was founded in 1948, following the Second World War, to provide healthcare free at the point of use."},
-  {ch:3, q:"Winston Churchill served as UK Prime Minister most notably during which period?", opts:["The First World War","The Second World War","The Falklands War","The Cold War's final years"], correct:1, ex:"Winston Churchill led Britain as Prime Minister for most of the Second World War, from 1940."},
-
-  // Chapter 4 — Modern society
-  {ch:4, q:"Which of these is the established (official) church in England?", opts:["The Roman Catholic Church","The Church of England","The Methodist Church","The Church of Scotland"], correct:1, ex:"The Church of England is the established church in England, with the monarch as its Supreme Governor."},
-  {ch:4, q:"St George's Day, the feast day of England's patron saint, is celebrated on:", opts:["1 March","17 March","23 April","30 November"], correct:2, ex:"St George's Day is 23 April. (St David's Day is 1 March, St Patrick's Day is 17 March, and St Andrew's Day is 30 November.)"},
-  {ch:4, q:"Which sport is widely regarded as having its modern rules codified in England in the 19th century and is now played worldwide?", opts:["Baseball","Association football (soccer)","Basketball","Ice hockey"], correct:1, ex:"The Football Association, formed in England in 1863, codified the modern rules of association football."},
-  {ch:4, q:"The Notting Hill Carnival, held annually in London, celebrates primarily:", opts:["Scottish heritage","Caribbean culture and community","Welsh literature","Anglo-Saxon history"], correct:1, ex:"Notting Hill Carnival celebrates Caribbean culture and has been held annually in London since the 1960s."},
-  {ch:4, q:"Which of the following is a well-known British institution for public broadcasting?", opts:["The BBC","The Royal Mail","The Bank of England","Ofcom"], correct:0, ex:"The BBC (British Broadcasting Corporation) is the UK's public broadcasting institution, funded mainly by the licence fee."},
-  {ch:4, q:"Remembrance Day, marked by the wearing of a poppy, commemorates:", opts:["The end of the Second World War only","Those who died in conflicts since the First World War","The founding of the NHS","The union of the four nations"], correct:1, ex:"Remembrance Day (11 November) honours those who died in the First World War, the Second World War, and later conflicts."},
-  {ch:4, q:"Which of these is a well-known British tradition around Christmas time?", opts:["Trick-or-treating","Pantomime performances","The Running of the Bulls","Carnival parades in February"], correct:1, ex:"Pantomime ('panto') is a traditional British form of comic theatre, especially popular around Christmas."},
-  {ch:4, q:"The UK is broadly described, in terms of religion, as a society that is:", opts:["Officially atheist by law","Religiously diverse, with Christianity historically the largest faith","Legally required to be Anglican","Restricted to a single recognised religion"], correct:1, ex:"The UK is religiously diverse; Christianity has historically been the largest faith, alongside significant Muslim, Hindu, Sikh, Jewish, and other communities, as well as many people of no religion."},
-  {ch:4, q:"Which of these is an example of a widely celebrated non-Christian festival in the UK?", opts:["Diwali","Thanksgiving","Bastille Day","Oktoberfest"], correct:0, ex:"Diwali, the Hindu and Sikh festival of light, is widely celebrated by communities across the UK."},
-
-  // Chapter 5 — Government, law, your role
-  {ch:5, q:"The UK Parliament is made up of the House of Commons, the House of Lords, and:", opts:["The Prime Minister's Office","The Monarch","The Supreme Court","The Cabinet Office"], correct:1, ex:"Parliament consists of the House of Commons, the House of Lords, and the Monarch, who formally opens each session."},
-  {ch:5, q:"Members of the House of Commons (MPs) are:", opts:["Appointed by the Prime Minister","Elected by the public in general elections","Chosen by the House of Lords","Selected by the monarch"], correct:1, ex:"MPs are elected by the public in constituency-based general elections."},
-  {ch:5, q:"How often must a UK general election be held, at maximum, under current law?", opts:["Every 2 years","Every 5 years","Every 7 years","Every 10 years"], correct:1, ex:"Under the Dissolution and Calling of Parliament Act 2022, a general election must be held at least every 5 years."},
-  {ch:5, q:"The minimum voting age in UK general elections is:", opts:["16","18","21","25"], correct:1, ex:"You must be 18 or over to vote in a UK general election."},
-  {ch:5, q:"Which of these best describes the role of the Prime Minister?", opts:["Head of state","Head of the elected government","Head of the judiciary","Ceremonial role only"], correct:1, ex:"The Prime Minister is the head of the UK government, while the monarch remains the ceremonial head of state."},
-  {ch:5, q:"Devolved governments with their own powers exist in which parts of the UK?", opts:["England only","Scotland, Wales, and Northern Ireland","London only","Only Scotland"], correct:1, ex:"Scotland, Wales, and Northern Ireland each have devolved administrations with varying powers over local matters."},
-  {ch:5, q:"Jury service in criminal trials in the UK is generally:", opts:["Voluntary and paid work","A civic duty that eligible citizens can be required to perform","Only for legal professionals","Optional for anyone over 21"], correct:1, ex:"Jury service is a civic duty — eligible adults can be legally required to serve if called."},
-  {ch:5, q:"Which of these is a responsibility expected of all UK residents?", opts:["Obeying the law","Voting in every election","Joining a trade union","Owning property"], correct:0, ex:"Obeying the law is a basic responsibility of everyone living in the UK, alongside paying any taxes owed and respecting others' rights."},
-  {ch:5, q:"Local councils are primarily responsible for services such as:", opts:["National defence","Rubbish collection, local schools, and roads","Foreign policy","Setting the Bank of England's interest rate"], correct:1, ex:"Local councils handle local services including rubbish collection, local schools, libraries, and road maintenance."},
-  {ch:5, q:"The independence of the judiciary means that:", opts:["Judges are elected by the public","Courts make decisions free from political interference","The Prime Minister appoints all judges directly","Judges can change laws at will"], correct:1, ex:"Judicial independence means courts decide cases based on the law, free from interference by the government or Parliament."},
-  {ch:5, q:"Which of these best describes how taxes such as Income Tax fund UK society?", opts:["They pay for public services like the NHS, education, and welfare","They are only used for the royal household","They fund private businesses directly","They are optional contributions"], correct:0, ex:"Taxes fund public services including the NHS, state education, welfare, and infrastructure."}
-];
-
-/* Flashcards — quick-recall facts, separate from the quiz bank */
-const FLASHCARDS = [
-  {ch:"Chapter II", front:"What are the four nations of the UK?", back:"England, Scotland, Wales, and Northern Ireland."},
-  {ch:"Chapter II", front:"Capital of Wales", back:"Cardiff."},
-  {ch:"Chapter II", front:"Capital of Scotland", back:"Edinburgh."},
-  {ch:"Chapter II", front:"Longest river in the UK", back:"The River Severn."},
-  {ch:"Chapter II", front:"Highest mountain in the British Isles", back:"Ben Nevis, in Scotland."},
-  {ch:"Chapter III", front:"Year of the Battle of Hastings", back:"1066 — William of Normandy defeated Harold and became king."},
-  {ch:"Chapter III", front:"Year Magna Carta was signed", back:"1215."},
-  {ch:"Chapter III", front:"Year the Act of Union joined England and Scotland", back:"1707, forming the Kingdom of Great Britain."},
-  {ch:"Chapter III", front:"Year the NHS was founded", back:"1948."},
-  {ch:"Chapter III", front:"Year women over 30 first gained the vote", back:"1918 (equal voting age with men from 1928)."},
-  {ch:"Chapter IV", front:"England's patron saint's day", back:"St George's Day, 23 April."},
-  {ch:"Chapter IV", front:"Wales's patron saint's day", back:"St David's Day, 1 March."},
-  {ch:"Chapter IV", front:"Scotland's patron saint's day", back:"St Andrew's Day, 30 November."},
-  {ch:"Chapter IV", front:"Northern Ireland's patron saint's day", back:"St Patrick's Day, 17 March."},
-  {ch:"Chapter V", front:"Minimum voting age for UK general elections", back:"18 years old."},
-  {ch:"Chapter V", front:"Maximum gap allowed between UK general elections", back:"5 years."},
-  {ch:"Chapter V", front:"What Parliament is made up of", back:"The House of Commons, the House of Lords, and the Monarch."},
-  {ch:"Chapter V", front:"Who is head of state vs head of government?", back:"The Monarch is head of state; the Prime Minister is head of government."}
-];
-
-document.getElementById('statQCount').textContent = QUESTIONS.length + '+';
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
-document.querySelectorAll('[data-target]').forEach(el=>{
-  el.addEventListener('click',()=>{
-    const id = el.getAttribute('data-target');
-    document.getElementById(id).scrollIntoView({behavior:'smooth'});
-    document.getElementById('mainNav').classList.remove('open');
-  });
-});
-document.getElementById('navToggle').addEventListener('click',()=>{
-  document.getElementById('mainNav').classList.toggle('open');
-});
-
-/* =========================================================
-   STUDY MODE
-========================================================= */
-const chapterListEl = document.getElementById('chapterList');
-CHAPTERS.forEach(c=>{
-  const qs = QUESTIONS.filter(q=>q.ch===c.id);
-  const div = document.createElement('div');
-  div.className = 'chapter';
-  div.innerHTML = `
-    <div class="chapter-head">
-      <div class="chapter-roman">${c.roman}</div>
-      <h3>${c.title}</h3>
-      <div class="meta">${qs.length} questions</div>
-    </div>
-    <div class="chapter-body">
-      ${qs.map(q=>`
-        <div class="study-q">
-          <div class="q">${q.q}</div>
-          <div class="a"><b>${q.opts[q.correct]}</b> — ${q.ex}</div>
-        </div>`).join('')}
-    </div>`;
-  div.querySelector('.chapter-head').addEventListener('click',()=>div.classList.toggle('open'));
-  chapterListEl.appendChild(div);
-});
-
-/* =========================================================
-   PRACTICE TEST ENGINE (in-memory session state — no data
-   leaves the browser, nothing is persisted after refresh)
-========================================================= */
-let session = { testsTakenThisSession:0, isPremium:false };
-const FREE_DAILY_LIMIT = 3;
-const TEST_LENGTH = 24;
-const TEST_SECONDS = 45*60;
-const PASS_MARK = 0.75;
-
-let quiz = null; // {questions, answers, index, timeLeft, timerId}
-
-function shuffledQuestions(n){
-  const copy = [...QUESTIONS];
-  for(let i=copy.length-1;i>0;i--){
-    const j = Math.floor(Math.random()*(i+1));
-    [copy[i],copy[j]]=[copy[j],copy[i]];
-  }
-  return copy.slice(0,n);
-}
-
-document.getElementById('startTestBtn').addEventListener('click', startTest);
-
-function startTest(){
-  if(!session.isPremium && session.testsTakenThisSession>=FREE_DAILY_LIMIT){
-    document.getElementById('dailyLimitNote').style.display='block';
-    return;
-  }
-  session.testsTakenThisSession++;
-  quiz = {
-    questions: shuffledQuestions(TEST_LENGTH),
-    answers: new Array(TEST_LENGTH).fill(null),
-    index: 0,
-    timeLeft: TEST_SECONDS
-  };
-  document.getElementById('testSetup').classList.add('hidden');
-  document.getElementById('resultsArea').classList.add('hidden');
-  document.getElementById('quizArea').classList.remove('hidden');
-  renderQuiz();
-  quiz.timerId = setInterval(tick,1000);
-}
-
-function tick(){
-  quiz.timeLeft--;
-  updateTimerDisplay();
-  if(quiz.timeLeft<=0){
-    clearInterval(quiz.timerId);
-    finishTest();
-  }
-}
-function updateTimerDisplay(){
-  const t = document.getElementById('quizTimer');
-  if(!t) return;
-  const m = Math.floor(quiz.timeLeft/60), s = quiz.timeLeft%60;
-  t.textContent = `${m}:${s.toString().padStart(2,'0')}`;
-  t.classList.toggle('warn', quiz.timeLeft<120);
-}
-
-const chapterName = id => CHAPTERS.find(c=>c.id===id).title;
-const letters = ['A','B','C','D'];
-
-function renderQuiz(){
-  const area = document.getElementById('quizArea');
-  const q = quiz.questions[quiz.index];
-  const answered = quiz.answers[quiz.index];
-  area.innerHTML = `
-    <div class="quiz-shell">
-      <div class="quiz-top">
-        <div>Question ${quiz.index+1} of ${TEST_LENGTH}</div>
-        <div class="timer" id="quizTimer"></div>
-      </div>
-      <div class="progressbar"><div class="progressbar-fill" style="width:${(quiz.index/TEST_LENGTH)*100}%"></div></div>
-      <div class="quiz-body">
-        <div class="quiz-chapter-tag">${chapterName(q.ch)}</div>
-        <div class="quiz-q">${q.q}</div>
-        <div class="options" id="optionsWrap">
-          ${q.opts.map((opt,i)=>`
-            <button class="option" data-i="${i}">
-              <span class="letter">${letters[i]}</span><span>${opt}</span>
-            </button>`).join('')}
-        </div>
-        <div class="explain" id="explainBox"></div>
-      </div>
-      <div class="quiz-nav">
-        <button class="btn btn-outline" style="border-color:var(--line);color:var(--navy);" id="prevQ" ${quiz.index===0?'disabled':''}>← Previous</button>
-        <button class="btn btn-navy" id="nextQ">${quiz.index===TEST_LENGTH-1?'Submit exam':'Next →'}</button>
-      </div>
-    </div>`;
-  updateTimerDisplay();
-
-  document.querySelectorAll('#optionsWrap .option').forEach(btn=>{
-    btn.addEventListener('click',()=>selectOption(parseInt(btn.dataset.i)));
-  });
-  document.getElementById('prevQ').addEventListener('click',()=>{ quiz.index--; renderQuiz(); });
-  document.getElementById('nextQ').addEventListener('click',()=>{
-    if(quiz.index===TEST_LENGTH-1){ finishTest(); }
-    else { quiz.index++; renderQuiz(); }
-  });
-
-  if(answered!==null) markAnswered(answered,true);
-}
-
-function selectOption(i){
-  quiz.answers[quiz.index]=i;
-  markAnswered(i,false);
-}
-function markAnswered(i,silent){
-  const q = quiz.questions[quiz.index];
-  document.querySelectorAll('#optionsWrap .option').forEach((btn,idx)=>{
-    btn.classList.toggle('selected', idx===i);
-  });
-}
-
-function finishTest(){
-  clearInterval(quiz.timerId);
-  document.getElementById('quizArea').classList.add('hidden');
-  const area = document.getElementById('resultsArea');
-  area.classList.remove('hidden');
-
-  let correct=0;
-  const byChapter = {};
-  CHAPTERS.forEach(c=>byChapter[c.id]={total:0,correct:0});
-  quiz.questions.forEach((q,i)=>{
-    byChapter[q.ch].total++;
-    if(quiz.answers[i]===q.correct){ correct++; byChapter[q.ch].correct++; }
-  });
-  const pct = Math.round((correct/TEST_LENGTH)*100);
-  const passed = correct/TEST_LENGTH >= PASS_MARK;
-
-  area.innerHTML = `
-    <div class="quiz-shell results">
-      <div class="score">${correct}/${TEST_LENGTH}</div>
-      <div class="verdict ${passed?'pass':'fail'}">${passed? 'Pass — well done' : 'Not yet a pass'} · ${pct}%</div>
-      <div class="breakdown">
-        ${CHAPTERS.map(c=>{
-          const b = byChapter[c.id];
-          const p = b.total? Math.round((b.correct/b.total)*100):0;
-          return `<div class="breakdown-row">
-            <span>${c.title}</span>
-            <span style="display:flex;align-items:center;gap:8px;">
-              <span class="breakdown-bar"><span style="width:${p}%"></span></span>
-              ${b.correct}/${b.total}
-            </span>
-          </div>`;
-        }).join('')}
-      </div>
-      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
-        <button class="btn btn-navy" id="reviewBtn">Review answers</button>
-        <button class="btn btn-outline" style="border-color:var(--line);color:var(--navy);" id="retakeBtn">Take another test</button>
-      </div>
-    </div>
-    <div id="reviewArea"></div>`;
-
-  document.getElementById('retakeBtn').addEventListener('click',()=>{
-    area.classList.add('hidden');
-    document.getElementById('testSetup').classList.remove('hidden');
-    if(!session.isPremium && session.testsTakenThisSession>=FREE_DAILY_LIMIT){
-      document.getElementById('dailyLimitNote').style.display='block';
-    }
-  });
-  document.getElementById('reviewBtn').addEventListener('click', renderReview);
-}
-
-function renderReview(){
-  const wrap = document.getElementById('reviewArea');
-  wrap.innerHTML = quiz.questions.map((q,i)=>{
-    const chosen = quiz.answers[i];
-    const isCorrect = chosen===q.correct;
-    return `<div class="quiz-shell" style="margin-top:14px;">
-      <div class="quiz-body">
-        <div class="quiz-chapter-tag">${chapterName(q.ch)} · Question ${i+1}</div>
-        <div class="quiz-q" style="font-size:16px;">${q.q}</div>
-        <div class="options">
-          ${q.opts.map((opt,idx)=>{
-            let cls='option';
-            if(idx===q.correct) cls+=' correct';
-            else if(idx===chosen && !isCorrect) cls+=' incorrect';
-            return `<div class="${cls}"><span class="letter">${letters[idx]}</span><span>${opt}</span></div>`;
-          }).join('')}
-        </div>
-        <div class="explain show">${q.ex}</div>
-      </div>
-    </div>`;
-  }).join('');
-}
-
-/* =========================================================
-   FLASHCARDS
-========================================================= */
-let flashIndex=0;
-function renderFlash(){
-  const f = FLASHCARDS[flashIndex];
-  document.getElementById('flashTagFront').textContent = f.ch;
-  document.getElementById('flashTagBack').textContent = f.ch;
-  document.getElementById('flashFront').textContent = f.front;
-  document.getElementById('flashBack').textContent = f.back;
-  document.getElementById('flashCount').textContent = `Card ${flashIndex+1} of ${FLASHCARDS.length}`;
-  document.getElementById('flashcard').classList.remove('flipped');
-}
-document.getElementById('flashcard').addEventListener('click',function(){ this.classList.toggle('flipped'); });
-document.getElementById('flashNext').addEventListener('click',()=>{ flashIndex=(flashIndex+1)%FLASHCARDS.length; renderFlash(); });
-document.getElementById('flashPrev').addEventListener('click',()=>{ flashIndex=(flashIndex-1+FLASHCARDS.length)%FLASHCARDS.length; renderFlash(); });
-renderFlash();
-
-/* =========================================================
-   PREMIUM (placeholder — real checkout wired in on deploy)
-========================================================= */
-document.getElementById('upgradeBtn').addEventListener('click',()=>{
-  const root = document.getElementById('modalRoot');
-  root.innerHTML = `
-    <div class="modal-backdrop" id="backdrop">
-      <div class="modal">
-        <h3>Upgrade to Premium</h3>
-        <p>This demo doesn't take real payments yet. When you deploy this app, connect this button to a Stripe Checkout session so payment unlocks premium access automatically. For now, you can preview premium mode below.</p>
-        <div class="actions">
-          <button class="btn btn-outline" style="border-color:var(--line);color:var(--navy);" id="closeModal">Close</button>
-          <button class="btn btn-gold" id="previewPremium">Preview premium mode</button>
-        </div>
-      </div>
-    </div>`;
-  document.getElementById('closeModal').addEventListener('click',()=>root.innerHTML='');
-  document.getElementById('previewPremium').addEventListener('click',()=>{
-    session.isPremium = true;
-    document.getElementById('dailyLimitNote').style.display='none';
-    root.innerHTML = `
-      <div class="modal-backdrop" id="backdrop2">
-        <div class="modal">
-          <h3>Premium preview enabled</h3>
-          <p>Unlimited mock exams are now unlocked for this session. This is a local preview only — no payment was taken.</p>
-          <div class="actions"><button class="btn btn-navy" id="closeModal2">Got it</button></div>
-        </div>
-      </div>`;
-    document.getElementById('closeModal2').addEventListener('click',()=>root.innerHTML='');
-  });
-});
-</script>
+<script src="assets/app.js"></script>
 </body>
 </html>

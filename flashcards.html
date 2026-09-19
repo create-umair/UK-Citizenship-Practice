@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flashcards — UK Citizenship Prep</title>
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="flashcards">
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html"><img src="assets/logo-mark.svg" alt="UK Citizenship Prep logo"> UK Citizenship Prep</a>
+    <nav class="nav" id="mainNav">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="study.html" data-page="study">Study</a>
+      <a href="practice.html" data-page="practice">Practice Test</a>
+      <a href="flashcards.html" data-page="flashcards">Flashcards</a>
+      <a href="english.html" data-page="english">English (B1)</a>
+      <a href="premium.html" data-page="premium">Premium</a>
+    </nav>
+    <button class="nav-mobile-toggle" id="navToggle">Menu</button>
+  </div>
+</header>
+
+<section class="hero" style="padding:44px 0 34px;">
+  <div class="hero-inner">
+    <div class="kicker">Life in the UK — Flashcards</div>
+    <h1 style="font-size:32px;">Quick recall for key facts and dates.</h1>
+    <p class="lead" style="margin-bottom:0;">Tap a card to flip it. Use Next/Previous to work through the deck.</p>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="container">
+    <div class="flash-wrap">
+      <div class="flashcard" id="flashcard">
+        <div class="flashcard-inner">
+          <div class="flashcard-face front"><span class="tag" id="flashTagFront">Chapter</span><span id="flashFront"></span></div>
+          <div class="flashcard-face back"><span class="tag" id="flashTagBack">Answer</span><span id="flashBack"></span></div>
+        </div>
+      </div>
+      <div class="flash-count" id="flashCount"></div>
+      <div class="flash-controls">
+        <button class="btn btn-outline-navy" id="flashPrev">← Previous</button>
+        <button class="btn btn-navy" id="flashNext">Next →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      © <span id="footerYear"></span> UK Citizenship Prep · Independent study aid · Not affiliated with the Home Office or gov.uk
+    </div>
+  </div>
+</footer>
+
+<div id="modalRoot"></div>
+<script src="assets/questions-uk.js"></script>
+<script src="assets/app.js"></script>
+<script>
+  let flashIndex = 0;
+  function renderFlash() {
+    const f = UK_FLASHCARDS[flashIndex];
+    document.getElementById('flashTagFront').textContent = f.ch;
+    document.getElementById('flashTagBack').textContent = f.ch;
+    document.getElementById('flashFront').textContent = f.front;
+    document.getElementById('flashBack').textContent = f.back;
+    document.getElementById('flashCount').textContent = `Card ${flashIndex + 1} of ${UK_FLASHCARDS.length}`;
+    document.getElementById('flashcard').classList.remove('flipped');
+  }
+  document.getElementById('flashcard').addEventListener('click', function () { this.classList.toggle('flipped'); });
+  document.getElementById('flashNext').addEventListener('click', () => { flashIndex = (flashIndex + 1) % UK_FLASHCARDS.length; renderFlash(); });
+  document.getElementById('flashPrev').addEventListener('click', () => { flashIndex = (flashIndex - 1 + UK_FLASHCARDS.length) % UK_FLASHCARDS.length; renderFlash(); });
+  renderFlash();
+</script>
+</body>
+</html>

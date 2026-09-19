@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English (B1) Practice — UK Citizenship Prep</title>
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="english">
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html"><img src="assets/logo-mark.svg" alt="UK Citizenship Prep logo"> UK Citizenship Prep</a>
+    <nav class="nav" id="mainNav">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="study.html" data-page="study">Study</a>
+      <a href="practice.html" data-page="practice">Practice Test</a>
+      <a href="flashcards.html" data-page="flashcards">Flashcards</a>
+      <a href="english.html" data-page="english">English (B1)</a>
+      <a href="premium.html" data-page="premium">Premium</a>
+    </nav>
+    <button class="nav-mobile-toggle" id="navToggle">Menu</button>
+  </div>
+</header>
+
+<section class="hero" style="padding:44px 0 34px;">
+  <div class="hero-inner">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">English Language Requirement — B1 Practice</div>
+        <h1 style="font-size:32px;">Practise the English skills you'll need, not just the exam.</h1>
+        <p class="lead" style="margin-bottom:0;">Grammar, everyday vocabulary, and reading comprehension at B1 level — the standard generally required to demonstrate English proficiency for settlement and citizenship applications.</p>
+      </div>
+      <img class="hero-art" src="assets/illus-speech.svg" alt="Illustration representing a conversation" style="max-width:220px;">
+    </div>
+    <div class="disclaimer" style="margin-top:20px;">
+      <strong>Not an approved test.</strong> This practice module is not a Secure English Language Test (SELT) and cannot be used to prove your English level for an official application. Always sit an approved test from a Home Office-approved provider — check the current list at gov.uk.
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="container">
+
+    <div id="testSetup" class="test-setup">
+      <h3>B1 practice exam</h3>
+      <p style="color:var(--ink-soft);font-size:14.5px;">18 questions covering grammar, vocabulary, and reading comprehension, with a 20-minute timer and a 70% pass mark for this practice run.</p>
+      <ul>
+        <li>Questions are shuffled every time you start a new test</li>
+        <li>Reading questions include a short passage to read first</li>
+        <li>Full explanations are shown once you finish</li>
+      </ul>
+      <div id="dailyLimitNote" class="limit-note">
+        You've used your 3 free practice tests for this session. <a href="premium.html">Upgrade to Premium</a> for unlimited tests.
+      </div>
+      <button class="btn btn-navy" id="startTestBtn">Begin practice exam</button>
+    </div>
+
+    <div id="quizArea" class="hidden"></div>
+    <div id="resultsArea" class="hidden"></div>
+
+  </div>
+</section>
+
+<section class="panel">
+  <div class="container">
+    <div class="section-head">
+      <h2>Tips for the real English requirement</h2>
+    </div>
+    <div class="card-grid">
+      <div class="feature-card">
+        <h3>Know which test you need</h3>
+        <p>Requirements vary by visa or citizenship route — some accept a degree taught in English instead of a separate test. Check gov.uk for your specific route.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Practise speaking aloud</h3>
+        <p>Many approved tests include a speaking component. Practising conversation out loud, not just reading silently, makes a real difference.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Use everyday situations</h3>
+        <p>Reading tenancy agreements, NHS letters, or job listings in English is excellent real-world B1-level practice alongside this module.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      © <span id="footerYear"></span> UK Citizenship Prep · Independent study aid · Not affiliated with the Home Office or gov.uk
+    </div>
+  </div>
+</footer>
+
+<div id="modalRoot"></div>
+<script src="assets/questions-english.js"></script>
+<script src="assets/quiz-engine.js"></script>
+<script src="assets/app.js"></script>
+<script>
+  initQuizEngine({
+    setupId: 'testSetup',
+    quizAreaId: 'quizArea',
+    resultsId: 'resultsArea',
+    limitNoteId: 'dailyLimitNote',
+    startBtnId: 'startTestBtn',
+    questions: EN_QUESTIONS,
+    groups: EN_GROUPS,
+    testLength: 18,
+    testSeconds: 20 * 60,
+    passMark: 0.70,
+    freeLimit: 3
+  });
+</script>
+</body>
+</html>

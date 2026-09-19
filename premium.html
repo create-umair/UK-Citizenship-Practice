@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Plans — UK Citizenship Prep</title>
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="premium">
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html"><img src="assets/logo-mark.svg" alt="UK Citizenship Prep logo"> UK Citizenship Prep</a>
+    <nav class="nav" id="mainNav">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="study.html" data-page="study">Study</a>
+      <a href="practice.html" data-page="practice">Practice Test</a>
+      <a href="flashcards.html" data-page="flashcards">Flashcards</a>
+      <a href="english.html" data-page="english">English (B1)</a>
+      <a href="premium.html" data-page="premium">Premium</a>
+    </nav>
+    <button class="nav-mobile-toggle" id="navToggle">Menu</button>
+  </div>
+</header>
+
+<section class="premium-band" style="padding:50px 0 40px;">
+  <div class="container">
+    <div class="kicker">Plans & Packages</div>
+    <h1 style="color:#fff;font-size:34px;">Free to start. Choose a package when you're ready.</h1>
+    <p style="color:#9BA3BC;max-width:560px;margin:14px 0 8px;font-size:15px;">Study mode and flashcards are always free. Pick a package for unlimited mock exams and full access when you're closer to your test date.</p>
+    <div class="coming-soon-badge">⏳ Online payment is coming soon — packages below show planned pricing</div>
+  </div>
+</section>
+
+<section class="panel premium-band" style="padding-top:0;">
+  <div class="container">
+    <div class="compare">
+      <div class="plan">
+        <h3>Free</h3>
+        <div class="price">£0</div>
+        <div class="desc">Get started right away, no account needed.</div>
+        <ul>
+          <li>Full study mode, all 5 chapters</li>
+          <li>Life in the UK & English flashcards</li>
+          <li>3 mock exams per session, each module</li>
+          <li class="no">Full question bank</li>
+          <li class="no">Downloadable revision notes</li>
+          <li class="no">Topic-mastery analytics</li>
+        </ul>
+        <a class="btn btn-outline" href="practice.html">Get started</a>
+      </div>
+
+      <div class="plan">
+        <h3>Single Module</h3>
+        <div class="price">£4.99 <small>one-off</small></div>
+        <div class="desc">Unlimited access to either the Life in the UK or the English (B1) module.</div>
+        <ul>
+          <li>Unlimited mock exams for one module</li>
+          <li>Full question bank for that module</li>
+          <li>Downloadable PDF revision notes</li>
+          <li>Topic-by-topic mastery analytics</li>
+          <li class="no">Access to the other module</li>
+        </ul>
+        <button class="btn btn-navy" id="upgradeBtn">Choose this plan</button>
+      </div>
+
+      <div class="plan gold">
+        <div class="ribbon">Best value</div>
+        <h3>Complete Bundle</h3>
+        <div class="price">£7.99 <small>one-off</small></div>
+        <div class="desc">Everything in both modules — ideal if your test date is set.</div>
+        <ul>
+          <li>Unlimited mock exams, both modules</li>
+          <li>Full question bank, both modules</li>
+          <li>Downloadable PDF revision notes</li>
+          <li>Topic-by-topic mastery analytics</li>
+          <li>Personalised exam-day countdown plan</li>
+          <li>Ad-free</li>
+        </ul>
+        <button class="btn btn-gold" id="upgradeBtn2">Choose this plan</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="container">
+    <div class="section-head">
+      <h2>Frequently asked questions</h2>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>Is this an official government product?</span><span class="faq-plus">+</span></div>
+      <div class="faq-a">No. This is an independent study aid, not affiliated with the Home Office, UK Visas and Immigration, or gov.uk. It's designed to help you prepare, alongside — not instead of — the official handbook and requirements.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>Can I pay for Premium right now?</span><span class="faq-plus">+</span></div>
+      <div class="faq-a">Not yet — online payment is being set up. The pricing above reflects the planned packages, and this page will be updated the moment checkout goes live.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>Does passing a mock exam here guarantee I'll pass the real test?</span><span class="faq-plus">+</span></div>
+      <div class="faq-a">No test can guarantee a result. Consistently scoring well above the pass mark across several mock exams is a good sign you're well prepared, but always study the official handbook as your primary source.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>Is the English practice module an approved language test?</span><span class="faq-plus">+</span></div>
+      <div class="faq-a">No. It's practice material only. For your application, you'll need an approved Secure English Language Test (SELT) from a Home Office-approved provider, unless you qualify for an exemption.</div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      © <span id="footerYear"></span> UK Citizenship Prep · Independent study aid · Not affiliated with the Home Office or gov.uk
+    </div>
+  </div>
+</footer>
+
+<div id="modalRoot"></div>
+<script src="assets/app.js"></script>
+<script>
+  const btn2 = document.getElementById('upgradeBtn2');
+  if (btn2) btn2.addEventListener('click', () => document.getElementById('upgradeBtn').click());
+</script>
+</body>
+</html>

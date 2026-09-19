@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice Test — UK Citizenship Prep</title>
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="practice">
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html"><img src="assets/logo-mark.svg" alt="UK Citizenship Prep logo"> UK Citizenship Prep</a>
+    <nav class="nav" id="mainNav">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="study.html" data-page="study">Study</a>
+      <a href="practice.html" data-page="practice">Practice Test</a>
+      <a href="flashcards.html" data-page="flashcards">Flashcards</a>
+      <a href="english.html" data-page="english">English (B1)</a>
+      <a href="premium.html" data-page="premium">Premium</a>
+    </nav>
+    <button class="nav-mobile-toggle" id="navToggle">Menu</button>
+  </div>
+</header>
+
+<section class="hero" style="padding:44px 0 34px;">
+  <div class="hero-inner">
+    <div class="kicker">Life in the UK — Mock Exam</div>
+    <h1 style="font-size:32px;">24 questions · 45 minutes · pass mark 75%</h1>
+    <p class="lead" style="margin-bottom:0;">This mirrors the real test format, drawing questions at random from the full bank across all five chapters.</p>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="container">
+
+    <div id="testSetup" class="test-setup">
+      <h3>Mock exam</h3>
+      <p style="color:var(--ink-soft);font-size:14.5px;">You need 18 correct out of 24 (75%) to pass, within 45 minutes.</p>
+      <ul>
+        <li>Questions are shuffled every time you start a new test</li>
+        <li>You can move between questions before submitting</li>
+        <li>Full explanations are shown once you finish, question by question</li>
+      </ul>
+      <div id="dailyLimitNote" class="limit-note">
+        You've used your 3 free mock exams for this session. <a href="premium.html">Upgrade to Premium</a> for unlimited tests.
+      </div>
+      <button class="btn btn-navy" id="startTestBtn">Begin mock exam</button>
+    </div>
+
+    <div id="quizArea" class="hidden"></div>
+    <div id="resultsArea" class="hidden"></div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      © <span id="footerYear"></span> UK Citizenship Prep · Independent study aid · Not affiliated with the Home Office or gov.uk
+    </div>
+  </div>
+</footer>
+
+<div id="modalRoot"></div>
+<script src="assets/questions-uk.js"></script>
+<script src="assets/quiz-engine.js"></script>
+<script src="assets/app.js"></script>
+<script>
+  initQuizEngine({
+    setupId: 'testSetup',
+    quizAreaId: 'quizArea',
+    resultsId: 'resultsArea',
+    limitNoteId: 'dailyLimitNote',
+    startBtnId: 'startTestBtn',
+    questions: UK_QUESTIONS,
+    groups: UK_CHAPTERS.map(c => ({ id: c.id, title: c.title })),
+    testLength: 24,
+    testSeconds: 45 * 60,
+    passMark: 0.75,
+    freeLimit: 3
+  });
+</script>
+</body>
+</html>
