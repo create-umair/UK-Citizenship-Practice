@@ -2,7 +2,9 @@
 // anywhere and nothing persists after the page is refreshed.
 function initQuizEngine(cfg) {
   const letters = ['A','B','C','D'];
-  const session = { testsTaken: 0, isPremium: false };
+  const session = { testsTaken: 0 };
+  // Paid access is checked live so it takes effect straight after purchase.
+  const isUnlocked = () => typeof Premium !== 'undefined' && cfg.module && Premium.hasAccess(cfg.module);
 
   const els = {
     setup: document.getElementById(cfg.setupId),
@@ -30,7 +32,7 @@ function initQuizEngine(cfg) {
   }
 
   function startTest() {
-    if (!session.isPremium && session.testsTaken >= cfg.freeLimit) {
+    if (!isUnlocked() && session.testsTaken >= cfg.freeLimit) {
       if (els.limitNote) els.limitNote.style.display = 'block';
       return;
     }
@@ -159,7 +161,7 @@ function initQuizEngine(cfg) {
     document.getElementById('retakeBtn').addEventListener('click', () => {
       els.results.classList.add('hidden');
       els.setup.classList.remove('hidden');
-      if (!session.isPremium && session.testsTaken >= cfg.freeLimit && els.limitNote) {
+      if (!isUnlocked() && session.testsTaken >= cfg.freeLimit && els.limitNote) {
         els.limitNote.style.display = 'block';
       }
     });
@@ -192,11 +194,5 @@ function initQuizEngine(cfg) {
 
   if (els.startBtn) els.startBtn.addEventListener('click', startTest);
 
-  // Expose a way for the premium-preview modal to unlock this engine's limit
-  return {
-    unlockPremium() {
-      session.isPremium = true;
-      if (els.limitNote) els.limitNote.style.display = 'none';
-    }
-  };
+  // Nothing to expose: unlocking is handled by assets/premium.js.
 }
