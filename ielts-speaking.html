@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Speaking Parts 1, 2 and 3 Practice — UK Citizenship Prep</title>
+<meta name="description" content="Practise all three parts of the IELTS Speaking test: a Part 1 question bank, cue cards with a one-minute preparation timer and two-minute long turn, and Part 3 discussion themes.">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="ielts">
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html"><img src="assets/logo-mark.svg" alt="UK Citizenship Prep logo"> UK Citizenship Prep</a>
+    <nav class="nav" id="mainNav">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="study.html" data-page="study">Study</a>
+      <a href="practice.html" data-page="practice">Practice Test</a>
+      <a href="flashcards.html" data-page="flashcards">Flashcards</a>
+      <a href="english.html" data-page="english">English (B1)</a>
+      <a href="ielts.html" data-page="ielts">IELTS</a>
+      <a href="premium.html" data-page="premium">Premium</a>
+    </nav>
+    <button class="nav-mobile-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation menu">Menu</button>
+  </div>
+</header>
+
+<section class="hero" style="padding:44px 0 34px;">
+  <div class="hero-inner">
+    <div class="hero-grid">
+      <div>
+        <div class="kicker">IELTS — Speaking</div>
+        <h1 style="font-size:32px;">Practise out loud, against a real clock.</h1>
+        <p class="lead" style="margin-bottom:0;">The Speaking test is 11 to 14 minutes in three parts. The single most useful thing you can do is speak for the full two minutes in Part 2 without stopping — so this page gives you the cue card, the preparation minute, and the long turn timed exactly as they are in the test.</p>
+      </div>
+      <img class="hero-art" src="assets/illus-speech.svg" alt="" style="max-width:190px;">
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="container">
+    <div id="speakTabs">
+      <div class="tabs" role="tablist">
+        <button class="tab active" role="tab" aria-selected="true" data-target="sp-p2">Part 2 — the long turn</button>
+        <button class="tab" role="tab" aria-selected="false" data-target="sp-p1">Part 1 — questions</button>
+        <button class="tab" role="tab" aria-selected="false" data-target="sp-p3">Part 3 — discussion</button>
+        <button class="tab" role="tab" aria-selected="false" data-target="sp-lang">Functional language</button>
+      </div>
+
+      <!-- ===== PART 2 ===== -->
+      <div class="tabpanel active" role="tabpanel" id="sp-p2">
+        <div class="bigtimer" id="speakTimer">1:00</div>
+        <div class="timer-label" id="speakLabel">Preparation time</div>
+        <div class="timer-controls" style="margin-bottom:26px;">
+          <button class="btn btn-navy" id="startPrep">Start 1 min preparation</button>
+          <button class="btn btn-gold" id="startTalk">Start 2 min long turn</button>
+          <button class="btn btn-outline-navy" id="stopTimer">Stop</button>
+          <button class="btn btn-outline-navy" id="newCard">New cue card</button>
+        </div>
+
+        <div class="cue-card" id="cueCard"></div>
+
+        <div style="max-width:560px;margin:22px auto 0;">
+          <h4 style="font-family:'Fraunces',serif;font-size:16px;color:var(--navy);margin:0 0 10px;">Ideas to get you moving</h4>
+          <ul class="tip-list" id="cueIdeas"></ul>
+        </div>
+
+        <div style="max-width:560px;margin:22px auto 0;">
+          <h4 style="font-family:'Fraunces',serif;font-size:16px;color:var(--navy);margin:0 0 10px;">How to use this properly</h4>
+          <ul class="tip-list">
+            <li>Record yourself on your phone. Almost nobody hears their own hesitations until they play them back.</li>
+            <li>Take the full preparation minute and write key words only — never full sentences to read aloud.</li>
+            <li>Aim to still be talking when the two minutes end. Being stopped mid-sentence is a good sign.</li>
+            <li>Cover all four bullet points, but spend longest on the final "and explain why" — that is where the language gets more complex.</li>
+            <li>If you dry up, widen the topic: what it was like before, what someone else would say, what might change.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ===== PART 1 ===== -->
+      <div class="tabpanel" role="tabpanel" id="sp-p1">
+        <p style="font-size:14.5px;color:var(--ink-soft);max-width:640px;">Part 1 lasts four to five minutes on familiar topics. The examiner works through two or three topics, asking three or four questions each. Answer in two or three sentences — never one word, and never a two-minute speech.</p>
+        <div id="p1Bank" style="margin-top:20px;"></div>
+      </div>
+
+      <!-- ===== PART 3 ===== -->
+      <div class="tabpanel" role="tabpanel" id="sp-p3">
+        <p style="font-size:14.5px;color:var(--ink-soft);max-width:640px;">Part 3 is a discussion of more abstract questions linked to your Part 2 topic. Answers should be longer and more developed than Part 1 — make a claim, give a reason, then consider a limit or exception. Speculating and disagreeing politely both show range.</p>
+        <div id="p3Bank" style="margin-top:20px;"></div>
+      </div>
+
+      <!-- ===== LANGUAGE ===== -->
+      <div class="tabpanel" role="tabpanel" id="sp-lang">
+        <p style="font-size:14.5px;color:var(--ink-soft);max-width:640px;">These are functions, not scripts. Examiners recognise memorised chunks instantly, but knowing how to buy a second of thinking time, or how to concede a point gracefully, is genuine fluency.</p>
+        <div class="phrase-grid" id="langGrid" style="margin-top:20px;"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="container">
+    <div class="section-head"><h2>What you are actually marked on</h2></div>
+    <div class="skill-grid">
+      <div class="skill-card">
+        <div class="skill-meta">25% each</div>
+        <h3>Fluency &amp; Coherence</h3>
+        <ul>
+          <li>Speaking at length without long pauses</li>
+          <li>Hesitating to find ideas, not to find words</li>
+          <li>Connecting ideas so they are easy to follow</li>
+          <li>Self-correcting without derailing the answer</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-meta">25% each</div>
+        <h3>Lexical Resource</h3>
+        <ul>
+          <li>Precise word choice, not just wide vocabulary</li>
+          <li>Natural collocation</li>
+          <li>Some idiomatic language, used correctly</li>
+          <li>Paraphrasing when the exact word won't come</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-meta">25% each</div>
+        <h3>Grammatical Range &amp; Accuracy</h3>
+        <ul>
+          <li>A mix of simple and complex structures</li>
+          <li>Conditionals and a range of tenses</li>
+          <li>Errors that don't obscure meaning</li>
+          <li>Control under pressure in Part 3</li>
+        </ul>
+      </div>
+      <div class="skill-card">
+        <div class="skill-meta">25% each</div>
+        <h3>Pronunciation</h3>
+        <ul>
+          <li>Being understood without effort from the listener</li>
+          <li>Word and sentence stress</li>
+          <li>Intonation that carries meaning</li>
+          <li>Accent itself is never penalised</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      © <span id="footerYear"></span> UK Citizenship Prep · Independent study aid · Original practice material, not from any published IELTS paper
+    </div>
+  </div>
+</footer>
+
+<div id="modalRoot"></div>
+<script src="assets/questions-ielts.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/ielts.js"></script>
+<script>
+  initTabs('speakTabs');
+
+  // ----- Part 2 cue cards -----
+  let cardIndex = Math.floor(Math.random() * IELTS_SPEAKING_P2.length);
+
+  function renderCard() {
+    const c = IELTS_SPEAKING_P2[cardIndex];
+    document.getElementById('cueCard').innerHTML = `
+      <h3>${c.card}</h3>
+      <p style="font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0 0 8px;">You should say:</p>
+      <ul>${c.bullets.map(b => `<li>${b}</li>`).join('')}</ul>
+      <div class="follow"><b>Follow-up question:</b> ${c.followUp}</div>`;
+    document.getElementById('cueIdeas').innerHTML = c.ideas.map(i => `<li>${i}</li>`).join('');
+  }
+  renderCard();
+
+  const timerEl = document.getElementById('speakTimer');
+  const labelEl = document.getElementById('speakLabel');
+  const timer = makeTimer(timerEl, labelEl);
+
+  document.getElementById('startPrep').addEventListener('click', () => {
+    labelEl.textContent = 'Preparation time — write key words only';
+    timer.start(60);
+  });
+  document.getElementById('startTalk').addEventListener('click', () => {
+    labelEl.textContent = 'Long turn — keep talking until the timer stops';
+    timer.start(120);
+  });
+  document.getElementById('stopTimer').addEventListener('click', () => {
+    timer.stop();
+    labelEl.textContent = 'Stopped';
+  });
+  document.getElementById('newCard').addEventListener('click', () => {
+    cardIndex = pickDifferent(IELTS_SPEAKING_P2, cardIndex);
+    renderCard();
+    timer.reset(60);
+    labelEl.textContent = 'Preparation time';
+  });
+
+  // ----- Part 1 -----
+  document.getElementById('p1Bank').innerHTML = IELTS_SPEAKING_P1.map(t => `
+    <div class="qbank">
+      <h4>${t.topic}</h4>
+      <ol>${t.qs.map(q => `<li>${q}</li>`).join('')}</ol>
+    </div>`).join('');
+
+  // ----- Part 3 -----
+  document.getElementById('p3Bank').innerHTML = IELTS_SPEAKING_P3.map(t => `
+    <div class="qbank">
+      <h4>${t.theme}</h4>
+      <ol>${t.qs.map(q => `<li>${q}</li>`).join('')}</ol>
+    </div>`).join('');
+
+  // ----- Functional language -----
+  document.getElementById('langGrid').innerHTML = IELTS_SPEAKING_LANGUAGE.map(l => `
+    <div class="phrase-card">
+      <h5>${l.fn}</h5>
+      ${l.phrases.map(p => `<p>“${p}”</p>`).join('')}
+    </div>`).join('');
+</script>
+</body>
+</html>

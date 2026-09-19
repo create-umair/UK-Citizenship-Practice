@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Writing Task 1 &amp; Task 2 Practice — UK Citizenship Prep</title>
+<meta name="description" content="Practise IELTS Writing Task 1 and Task 2 with Academic and General Training prompts, structure guides, a live word counter, exam timer and a self-assessment rubric.">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="ielts">
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html"><img src="assets/logo-mark.svg" alt="UK Citizenship Prep logo"> UK Citizenship Prep</a>
+    <nav class="nav" id="mainNav">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="study.html" data-page="study">Study</a>
+      <a href="practice.html" data-page="practice">Practice Test</a>
+      <a href="flashcards.html" data-page="flashcards">Flashcards</a>
+      <a href="english.html" data-page="english">English (B1)</a>
+      <a href="ielts.html" data-page="ielts">IELTS</a>
+      <a href="premium.html" data-page="premium">Premium</a>
+    </nav>
+    <button class="nav-mobile-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation menu">Menu</button>
+  </div>
+</header>
+
+<section class="hero" style="padding:44px 0 34px;">
+  <div class="hero-inner">
+    <div class="kicker">IELTS — Writing</div>
+    <h1 style="font-size:32px;">Write under exam conditions, then mark yourself honestly.</h1>
+    <p class="lead" style="margin-bottom:0;">Pick a task, start the clock, and write in the box. The word counter and timer behave like the real thing. When you finish, work through the rubric — it is the same four criteria an examiner uses, in plain language.</p>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="container">
+    <div id="taskTabs">
+      <div class="tabs" role="tablist">
+        <button class="tab active" role="tab" aria-selected="true" data-target="tp-academic">Academic Task 1</button>
+        <button class="tab" role="tab" aria-selected="false" data-target="tp-general">General Training Task 1</button>
+        <button class="tab" role="tab" aria-selected="false" data-target="tp-task2">Task 2 (both versions)</button>
+      </div>
+      <div class="tabpanel active" role="tabpanel" id="tp-academic"><div id="listAcademic"></div></div>
+      <div class="tabpanel" role="tabpanel" id="tp-general"><div id="listGeneral"></div></div>
+      <div class="tabpanel" role="tabpanel" id="tp-task2"><div id="listTask2"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE WRITING ROOM ============ -->
+<section class="panel" id="writingRoom">
+  <div class="container">
+    <div class="section-head">
+      <h2>Your answer</h2>
+      <div class="sub" id="activeTaskName">No task selected yet — choose one above.</div>
+    </div>
+
+    <div class="writer-wrap">
+      <div class="writer-bar">
+        <div>
+          <span class="bigtimer" id="writeTimer" style="font-size:30px;margin:0;">—:—</span>
+          <span class="timer-label" id="writeTimerLabel" style="display:inline;margin-left:8px;">Timer</span>
+        </div>
+        <div class="wordcount" id="wordCount"><b>0</b> words · minimum 250</div>
+      </div>
+      <div class="timer-controls" style="justify-content:flex-start;margin-bottom:14px;">
+        <button class="btn btn-navy btn-sm" id="startWriteTimer">Start timer</button>
+        <button class="btn btn-outline-navy btn-sm" id="pauseWriteTimer">Pause</button>
+        <button class="btn btn-outline-navy btn-sm" id="resetWriteTimer">Reset</button>
+        <button class="btn btn-outline-navy btn-sm" id="copyAnswer">Copy my answer</button>
+      </div>
+      <label for="answerBox" class="hidden">Your answer</label>
+      <textarea id="answerBox" placeholder="Start writing here. Nothing is sent anywhere — this stays in your browser and is cleared when you refresh the page."></textarea>
+      <p style="font-size:12.5px;color:var(--ink-soft);margin-top:10px;">Your writing is not saved or transmitted. Copy it out before you close the tab if you want to keep it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RUBRIC ============ -->
+<section class="panel">
+  <div class="container">
+    <div class="section-head">
+      <h2>Mark your own draft</h2>
+      <div class="sub">The four criteria are weighted equally. Be strict — the examiner will be.</div>
+    </div>
+    <div class="rubric" id="rubricWrap"></div>
+    <div class="rubric-score" id="rubricScore"></div>
+    <p style="font-size:13px;color:var(--ink-soft);margin-top:14px;text-align:center;max-width:620px;margin-left:auto;margin-right:auto;">
+      This is a study checklist written in plain language, not the official public band descriptors, and ticking every box is not a band score. Self-assessment plateaus quickly — get written work marked by a qualified teacher before you book the test.
+    </p>
+  </div>
+</section>
+
+<!-- ============ GENERAL ADVICE ============ -->
+<section class="panel">
+  <div class="container">
+    <div class="section-head"><h2>The habits that move a writing band</h2></div>
+    <div class="card-grid">
+      <div class="feature-card">
+        <h3>Plan for five minutes</h3>
+        <p>Five minutes deciding your position and your two body paragraphs saves ten minutes of rewriting. Candidates who start writing immediately usually produce the weakest structure.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Develop, don't list</h3>
+        <p>Two ideas explained properly beat five ideas mentioned. Each body paragraph wants a claim, a reason, and either an example or a consequence.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Leave two minutes to check</h3>
+        <p>Scan only for your own known errors — articles, plural -s, verb tense. Most candidates can find three or four real mistakes in two minutes.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:30px;">
+      <a class="btn btn-outline-navy" href="ielts-speaking.html">Next: Speaking Parts 1–3 →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      © <span id="footerYear"></span> UK Citizenship Prep · Independent study aid · Original task prompts, not from any published IELTS paper
+    </div>
+  </div>
+</footer>
+
+<div id="modalRoot"></div>
+<script src="assets/questions-ielts.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/ielts.js"></script>
+<script>
+  initTabs('taskTabs');
+
+  function taskCardHTML(t) {
+    const gt = t.version === 'General Training';
+    return `
+      <div class="task-card">
+        <span class="task-tag ${gt ? 'gt' : ''}">${t.version} · ${t.task} · ${t.minutes} min · ${t.words}+ words</span>
+        <div class="task-prompt">${t.prompt}</div>
+        <div class="task-data">${t.data}</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-bottom:16px;">
+          <div>
+            <h4 style="font-family:'Fraunces',serif;font-size:15px;color:var(--navy);margin:0 0 8px;">How to structure it</h4>
+            <ol style="margin:0;padding-left:18px;font-size:13.5px;color:var(--ink-soft);">
+              ${t.structure.map(s => `<li style="margin-bottom:5px;">${s}</li>`).join('')}
+            </ol>
+          </div>
+          <div>
+            <h4 style="font-family:'Fraunces',serif;font-size:15px;color:var(--navy);margin:0 0 8px;">Useful language</h4>
+            <div style="font-size:13.5px;color:var(--ink-soft);line-height:1.9;">
+              ${t.language.map(l => `<span style="background:var(--paper);border:1px solid var(--line);padding:2px 7px;margin-right:4px;white-space:nowrap;">${l}</span>`).join('')}
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-navy btn-sm" data-task="${t.id}">Write this task →</button>
+      </div>`;
+  }
+
+  document.getElementById('listAcademic').innerHTML =
+    IELTS_WRITING.filter(t => t.version === 'Academic').map(taskCardHTML).join('');
+  document.getElementById('listGeneral').innerHTML =
+    IELTS_WRITING.filter(t => t.version === 'General Training').map(taskCardHTML).join('');
+  document.getElementById('listTask2').innerHTML =
+    IELTS_WRITING.filter(t => t.version === 'Both').map(taskCardHTML).join('');
+
+  // ----- Writing room wiring -----
+  const timerEl = document.getElementById('writeTimer');
+  const labelEl = document.getElementById('writeTimerLabel');
+  const timer = makeTimer(timerEl, labelEl);
+  let activeTask = null;
+
+  function loadTask(id) {
+    activeTask = IELTS_WRITING.find(t => t.id === id);
+    if (!activeTask) return;
+    document.getElementById('activeTaskName').innerHTML =
+      `<b>${activeTask.version} · ${activeTask.task}</b> — ${activeTask.minutes} minutes, minimum ${activeTask.words} words`;
+    labelEl.textContent = `${activeTask.minutes}-minute task`;
+    timer.reset(activeTask.minutes * 60);
+    initWordCounter('answerBox', 'wordCount', activeTask.words);
+    document.getElementById('writingRoom').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  document.querySelectorAll('[data-task]').forEach(btn => {
+    btn.addEventListener('click', () => loadTask(btn.dataset.task));
+  });
+
+  document.getElementById('startWriteTimer').addEventListener('click', () => {
+    if (!activeTask) { alert('Choose a task above first.'); return; }
+    timer.start(activeTask.minutes * 60);
+  });
+  document.getElementById('pauseWriteTimer').addEventListener('click', () => timer.toggle());
+  document.getElementById('resetWriteTimer').addEventListener('click', () => {
+    if (activeTask) timer.reset(activeTask.minutes * 60);
+  });
+  document.getElementById('copyAnswer').addEventListener('click', () => {
+    const text = document.getElementById('answerBox').value;
+    if (!text.trim()) return;
+    navigator.clipboard?.writeText(text).then(() => {
+      const b = document.getElementById('copyAnswer');
+      b.textContent = 'Copied';
+      setTimeout(() => b.textContent = 'Copy my answer', 1600);
+    });
+  });
+
+  initWordCounter('answerBox', 'wordCount', 250);
+  renderRubric('rubricWrap', 'rubricScore', IELTS_WRITING_RUBRIC);
+</script>
+</body>
+</html>

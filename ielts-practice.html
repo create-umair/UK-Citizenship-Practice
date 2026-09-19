@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IELTS Reading &amp; Listening Practice — UK Citizenship Prep</title>
+<meta name="description" content="Timed IELTS practice: True/False/Not Given, reading detail, listening transcripts, grammar and academic vocabulary, with an explanation on every answer.">
+<link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="ielts">
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="brand" href="index.html"><img src="assets/logo-mark.svg" alt="UK Citizenship Prep logo"> UK Citizenship Prep</a>
+    <nav class="nav" id="mainNav">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="study.html" data-page="study">Study</a>
+      <a href="practice.html" data-page="practice">Practice Test</a>
+      <a href="flashcards.html" data-page="flashcards">Flashcards</a>
+      <a href="english.html" data-page="english">English (B1)</a>
+      <a href="ielts.html" data-page="ielts">IELTS</a>
+      <a href="premium.html" data-page="premium">Premium</a>
+    </nav>
+    <button class="nav-mobile-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation menu">Menu</button>
+  </div>
+</header>
+
+<section class="hero" style="padding:44px 0 34px;">
+  <div class="hero-inner">
+    <div class="kicker">IELTS — Reading, Listening &amp; Language Practice</div>
+    <h1 style="font-size:32px;">20 questions · 25 minutes · every answer explained.</h1>
+    <p class="lead" style="margin-bottom:0;">Questions are drawn at random from all six areas: True/False/Not Given, reading detail, listening transcripts, grammar, academic vocabulary and task rules. Your score breakdown shows which area to work on next.</p>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="container">
+
+    <div id="testSetup" class="test-setup">
+      <h3>IELTS practice set</h3>
+      <p style="color:var(--ink-soft);font-size:14.5px;">There is no official pass mark for IELTS — you receive a band score. This set flags 75% as a working target, roughly the level associated with band 7 performance on reading tasks.</p>
+      <ul>
+        <li>Reading passages and listening transcripts appear above the question</li>
+        <li>Listening items are written as transcripts, since there is no audio here — read once, then answer</li>
+        <li>You can move between questions before submitting</li>
+        <li>Full explanations, including why each distractor is wrong, are shown at the end</li>
+      </ul>
+      <div id="dailyLimitNote" class="limit-note">
+        You've used your 3 free practice sets for this session. <a href="premium.html">Upgrade to Premium</a> for unlimited practice.
+      </div>
+      <button class="btn btn-navy" id="startTestBtn">Begin practice set</button>
+    </div>
+
+    <div id="quizArea" class="hidden"></div>
+    <div id="resultsArea" class="hidden"></div>
+
+  </div>
+</section>
+
+<section class="panel">
+  <div class="container">
+    <div class="section-head">
+      <h2>Reading the passages the way the test wants</h2>
+    </div>
+    <div class="card-grid">
+      <div class="feature-card">
+        <h3>Not Given is not "probably false"</h3>
+        <p>If the passage does not state it, the answer is Not Given — even when the claim is obviously true in the real world. Judge only what is on the page.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Watch the absolutes</h3>
+        <p>Words like <i>all</i>, <i>never</i>, <i>proved</i> and <i>only</i> in a question statement often turn a True into a False. Check whether the passage really makes that strong a claim.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Paraphrase is the whole game</h3>
+        <p>Answers are almost never word-for-word matches. The test rewards spotting that "reductions in prescribed medication" and "fewer people taking drugs" are the same idea.</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:30px;">
+      <a class="btn btn-outline-navy" href="ielts-writing.html">Next: Writing Task 1 &amp; 2 →</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-bottom">
+      © <span id="footerYear"></span> UK Citizenship Prep · Independent study aid · Original practice material, not from any published IELTS paper
+    </div>
+  </div>
+</footer>
+
+<div id="modalRoot"></div>
+<script src="assets/questions-ielts.js"></script>
+<script src="assets/config.js"></script>
+<script src="assets/premium.js"></script>
+<script src="assets/quiz-engine.js"></script>
+<script src="assets/app.js"></script>
+<script>
+  initQuizEngine({
+    setupId: 'testSetup',
+    quizAreaId: 'quizArea',
+    resultsId: 'resultsArea',
+    limitNoteId: 'dailyLimitNote',
+    startBtnId: 'startTestBtn',
+    questions: IELTS_QUESTIONS,
+    groups: IELTS_GROUPS,
+    testLength: 20,
+    testSeconds: 25 * 60,
+    passMark: 0.75,
+    freeLimit: 3,
+    module: 'ielts'
+  });
+</script>
+</body>
+</html>

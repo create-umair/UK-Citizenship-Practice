@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Premium Plans — UK Citizenship Prep</title>
+<meta name="description" content="Unlimited mock exams for Life in the UK, English (B1) and IELTS. One-off payment through PayPal, no subscription.">
 <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,69 +22,71 @@
       <a href="practice.html" data-page="practice">Practice Test</a>
       <a href="flashcards.html" data-page="flashcards">Flashcards</a>
       <a href="english.html" data-page="english">English (B1)</a>
+      <a href="ielts.html" data-page="ielts">IELTS</a>
       <a href="premium.html" data-page="premium">Premium</a>
     </nav>
-    <button class="nav-mobile-toggle" id="navToggle">Menu</button>
+    <button class="nav-mobile-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation menu">Menu</button>
   </div>
 </header>
 
 <section class="premium-band" style="padding:50px 0 40px;">
   <div class="container">
-    <div class="kicker">Plans & Packages</div>
-    <h1 style="color:#fff;font-size:34px;">Free to start. Choose a package when you're ready.</h1>
-    <p style="color:#9BA3BC;max-width:560px;margin:14px 0 8px;font-size:15px;">Study mode and flashcards are always free. Pick a package for unlimited mock exams and full access when you're closer to your test date.</p>
-    <div class="coming-soon-badge">⏳ Online payment is coming soon — packages below show planned pricing</div>
+    <div class="kicker">Plans &amp; Packages</div>
+    <h1 style="color:#fff;font-size:34px;">Free to start. Pay once when you're ready.</h1>
+    <p style="color:#9BA3BC;max-width:580px;margin:14px 0 8px;font-size:15px;">Study mode, flashcards and the IELTS guides are always free. A paid plan removes the mock-exam limit for the modules you choose. One-off payment through PayPal — no subscription, no account.</p>
+    <div class="coming-soon-badge hidden" id="notConfiguredBadge">⏳ Online payment is coming soon — packages below show planned pricing</div>
+    <div class="owned-badge hidden" id="ownedBadge"></div>
   </div>
 </section>
 
 <section class="panel premium-band" style="padding-top:0;">
   <div class="container">
     <div class="compare">
+
       <div class="plan">
         <h3>Free</h3>
         <div class="price">£0</div>
         <div class="desc">Get started right away, no account needed.</div>
         <ul>
           <li>Full study mode, all 5 chapters</li>
-          <li>Life in the UK & English flashcards</li>
+          <li>Life in the UK &amp; English flashcards</li>
+          <li>IELTS format guide, writing and speaking rooms</li>
           <li>3 mock exams per session, each module</li>
-          <li class="no">Full question bank</li>
-          <li class="no">Downloadable revision notes</li>
-          <li class="no">Topic-mastery analytics</li>
+          <li class="no">Unlimited mock exams</li>
         </ul>
         <a class="btn btn-outline" href="practice.html">Get started</a>
       </div>
 
       <div class="plan">
         <h3>Single Module</h3>
-        <div class="price">£4.99 <small>one-off</small></div>
-        <div class="desc">Unlimited access to either the Life in the UK or the English (B1) module.</div>
+        <div class="price">£<span data-price="module">4.99</span> <small>one-off</small></div>
+        <div class="desc">Unlimited mock exams for the one module you choose.</div>
         <ul>
-          <li>Unlimited mock exams for one module</li>
-          <li>Full question bank for that module</li>
-          <li>Downloadable PDF revision notes</li>
-          <li>Topic-by-topic mastery analytics</li>
-          <li class="no">Access to the other module</li>
+          <li>Life in the UK, English (B1) <i>or</i> IELTS — your pick</li>
+          <li>Unlimited mock exams for that module</li>
+          <li class="no">The other two modules</li>
+          <li class="soon">Downloadable revision notes</li>
+          <li class="soon">Topic-mastery analytics</li>
         </ul>
-        <button class="btn btn-navy" id="upgradeBtn">Choose this plan</button>
+        <button class="btn btn-navy" data-plan="module">Choose this plan</button>
       </div>
 
       <div class="plan gold">
         <div class="ribbon">Best value</div>
         <h3>Complete Bundle</h3>
-        <div class="price">£7.99 <small>one-off</small></div>
-        <div class="desc">Everything in both modules — ideal if your test date is set.</div>
+        <div class="price">£<span data-price="bundle">7.99</span> <small>one-off</small></div>
+        <div class="desc">All three modules — ideal if your test date is set.</div>
         <ul>
-          <li>Unlimited mock exams, both modules</li>
-          <li>Full question bank, both modules</li>
-          <li>Downloadable PDF revision notes</li>
-          <li>Topic-by-topic mastery analytics</li>
-          <li>Personalised exam-day countdown plan</li>
-          <li>Ad-free</li>
+          <li>Life in the UK, English (B1) <i>and</i> IELTS</li>
+          <li>Unlimited mock exams in every module</li>
+          <li class="soon">Downloadable revision notes</li>
+          <li class="soon">Topic-mastery analytics</li>
+          <li class="soon">Exam-day countdown plan</li>
         </ul>
-        <button class="btn btn-gold" id="upgradeBtn2">Choose this plan</button>
+        <button class="btn btn-gold" data-plan="bundle">Choose this plan</button>
       </div>
     </div>
+    <p style="color:#7a83a0;font-size:12.5px;margin:18px 0 0;">Items marked <span class="soon-tag">Coming soon</span> are planned and are not part of what you are buying today. Payment is processed by PayPal; this site never sees your card or PayPal login.</p>
   </div>
 </section>
 
@@ -97,17 +100,22 @@
       <div class="faq-a">No. This is an independent study aid, not affiliated with the Home Office, UK Visas and Immigration, or gov.uk. It's designed to help you prepare, alongside — not instead of — the official handbook and requirements.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q"><span>Can I pay for Premium right now?</span><span class="faq-plus">+</span></div>
-      <div class="faq-a">Not yet — online payment is being set up. The pricing above reflects the planned packages, and this page will be updated the moment checkout goes live.</div>
+      <div class="faq-q"><span>How does payment work?</span><span class="faq-plus">+</span></div>
+      <div class="faq-a">You pay once through PayPal — with your PayPal balance or, where PayPal offers it, a debit or credit card. There is no subscription and nothing renews. Access unlocks as soon as PayPal confirms the payment.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q"><span>Can I use my plan on another phone or computer?</span><span class="faq-plus">+</span></div>
+      <div class="faq-a">Your access is saved in the browser you paid from. If you switch device, or clear your browser's site data, it will not carry over automatically. Keep your PayPal order ID and contact us with it and we will sort it out.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q"><span>Does passing a mock exam here guarantee I'll pass the real test?</span><span class="faq-plus">+</span></div>
       <div class="faq-a">No test can guarantee a result. Consistently scoring well above the pass mark across several mock exams is a good sign you're well prepared, but always study the official handbook as your primary source.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-q"><span>Is the English practice module an approved language test?</span><span class="faq-plus">+</span></div>
+      <div class="faq-q"><span>Is the English or IELTS practice an approved language test?</span><span class="faq-plus">+</span></div>
       <div class="faq-a">No. It's practice material only. For your application, you'll need an approved Secure English Language Test (SELT) from a Home Office-approved provider, unless you qualify for an exemption.</div>
     </div>
+    <p id="supportLine" class="hidden" style="margin-top:22px;font-size:14px;color:var(--ink-soft);"></p>
   </div>
 </section>
 
@@ -120,10 +128,49 @@
 </footer>
 
 <div id="modalRoot"></div>
+<script src="assets/config.js"></script>
+<script src="assets/premium.js"></script>
 <script src="assets/app.js"></script>
 <script>
-  const btn2 = document.getElementById('upgradeBtn2');
-  if (btn2) btn2.addEventListener('click', () => document.getElementById('upgradeBtn').click());
+  // Prices shown on the page always come from the same config that PayPal charges from.
+  document.querySelectorAll('[data-price]').forEach(el => {
+    const p = SITE_CONFIG.plans[el.dataset.price];
+    if (p) el.textContent = p.price;
+  });
+
+  // Buy buttons
+  document.querySelectorAll('[data-plan]').forEach(btn => {
+    btn.addEventListener('click', () => Premium.openCheckout(btn.dataset.plan));
+  });
+
+  // Status banners
+  function refreshStatus() {
+    document.getElementById('notConfiguredBadge').classList.toggle('hidden', Premium.isConfigured());
+    const owned = Premium.modulesOwned();
+    const badge = document.getElementById('ownedBadge');
+    if (owned.length) {
+      badge.textContent = '✓ Unlocked on this device: ' + owned.map(m => Premium.MODULES[m]).join(', ');
+      badge.classList.remove('hidden');
+    } else {
+      badge.classList.add('hidden');
+    }
+    // Everything owned → the bundle has nothing left to sell.
+    const all = Object.keys(Premium.MODULES).every(m => owned.includes(m));
+    document.querySelectorAll('[data-plan]').forEach(b => {
+      b.disabled = all;
+      b.style.opacity = all ? '.5' : '';
+      b.style.cursor = all ? 'default' : '';
+    });
+  }
+  refreshStatus();
+  document.addEventListener('premium:changed', refreshStatus);
+
+  // Support contact, only if one has been set in assets/config.js
+  if (SITE_CONFIG.supportEmail) {
+    const s = document.getElementById('supportLine');
+    s.innerHTML = 'Questions about a payment? Email <b>' + SITE_CONFIG.supportEmail + '</b> and include your PayPal order ID.';
+    s.classList.remove('hidden');
+  }
 </script>
 </body>
 </html>

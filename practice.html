@@ -21,9 +21,10 @@
       <a href="practice.html" data-page="practice">Practice Test</a>
       <a href="flashcards.html" data-page="flashcards">Flashcards</a>
       <a href="english.html" data-page="english">English (B1)</a>
+      <a href="ielts.html" data-page="ielts">IELTS</a>
       <a href="premium.html" data-page="premium">Premium</a>
     </nav>
-    <button class="nav-mobile-toggle" id="navToggle">Menu</button>
+    <button class="nav-mobile-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Toggle navigation menu">Menu</button>
   </div>
 </header>
 
@@ -68,6 +69,8 @@
 
 <div id="modalRoot"></div>
 <script src="assets/questions-uk.js"></script>
+<script src="assets/config.js"></script>
+<script src="assets/premium.js"></script>
 <script src="assets/quiz-engine.js"></script>
 <script src="assets/app.js"></script>
 <script>
@@ -82,7 +85,8 @@
     testLength: 24,
     testSeconds: 45 * 60,
     passMark: 0.75,
-    freeLimit: 3
+    freeLimit: 3,
+    module: 'uk'
   });
 </script>
 </body>
