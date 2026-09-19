@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="none"/>
+  <circle cx="200" cy="150" r="120" fill="#16203D"/>
+  <circle cx="200" cy="150" r="120" fill="none" stroke="#C9A85C" stroke-width="1.5" opacity="0.6"/>
+  <!-- Big Ben tower -->
+  <rect x="180" y="70" width="26" height="150" fill="#0b1730"/>
+  <rect x="176" y="60" width="34" height="14" fill="#0b1730"/>
+  <polygon points="176,60 193,38 210,60" fill="#0b1730"/>
+  <circle cx="193" cy="88" r="9" fill="#C9A85C" opacity="0.9"/>
+  <rect x="186" y="105" width="14" height="10" fill="#C9A85C" opacity="0.5"/>
+  <rect x="186" y="125" width="14" height="10" fill="#C9A85C" opacity="0.5"/>
+  <rect x="186" y="145" width="14" height="10" fill="#C9A85C" opacity="0.5"/>
+  <!-- surrounding low buildings -->
+  <rect x="110" y="170" width="60" height="50" fill="#0b1730" opacity="0.85"/>
+  <rect x="215" y="150" width="40" height="70" fill="#0b1730" opacity="0.85"/>
+  <rect x="260" y="185" width="50" height="35" fill="#0b1730" opacity="0.85"/>
+  <rect x="80" y="195" width="35" height="25" fill="#0b1730" opacity="0.85"/>
+  <!-- river line -->
+  <path d="M60 225 Q200 245 340 225" stroke="#C9A85C" stroke-width="2" fill="none" opacity="0.6"/>
+</svg>

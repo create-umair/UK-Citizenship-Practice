@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="31" fill="#0b1730"/>
+  <circle cx="32" cy="32" r="31" fill="none" stroke="#C9A85C" stroke-width="2"/>
+  <circle cx="32" cy="32" r="25" fill="none" stroke="#C9A85C" stroke-width="1" opacity="0.5"/>
+  <path d="M32 14 L36 24 L47 24 L38 31 L41 42 L32 35 L23 42 L26 31 L17 24 L28 24 Z" fill="#C9A85C"/>
+  <text x="32" y="53" font-family="Georgia, 'Times New Roman', serif" font-size="9" font-weight="700" fill="#EEF0EC" text-anchor="middle" letter-spacing="1">UKCP</text>
+</svg>
